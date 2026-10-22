@@ -1,0 +1,4 @@
+# build scaffolding and working files — not part of the site
+_build/
+site-prose.txt
+index.backup.html

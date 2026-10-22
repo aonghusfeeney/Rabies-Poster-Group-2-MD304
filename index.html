@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>100% Preventable, 100% Fatal — rabies and the road to Zero by 30</title>
+<meta name="theme-color" content="#8F1259">
+<meta name="description" content="Companion site to an e-poster on rabies elimination from the School of Medicine, University of Galway: the poster, a revision guide and further reading.">
+<style>
+  :root{
+    --tint:#F6EFE2; --page:#EFE7D6; --ink:#013C4E; --ink-2:#5A6B70;
+    --series:#00889D; --accent:#8F1259; --grid:#CFC9B6; --band:#E9D2D0;
+    --accent-fill:#8F1259; --on-fill:#FFFFFF; --card:#FFFFFF; --shadow:rgba(1,60,78,.13);
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --tint:#123640; --page:#0D272F; --ink:#EDE6D8; --ink-2:#A3B3B8;
+      --series:#3FB6C9; --accent:#EE92BC; --grid:#26454F; --band:#3E2333;
+      --accent-fill:#7A1450; --on-fill:#F6EFE2; --card:#16404B; --shadow:rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --tint:#123640; --page:#0D272F; --ink:#EDE6D8; --ink-2:#A3B3B8;
+    --series:#3FB6C9; --accent:#EE92BC; --grid:#26454F; --band:#3E2333;
+    --accent-fill:#7A1450; --on-fill:#F6EFE2; --card:#16404B; --shadow:rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:var(--serif);
+       font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .bar{position:sticky;top:0;z-index:20;background:var(--accent-fill);color:var(--on-fill)}
+  .bar-in{max-width:760px;margin:0 auto;padding:9px 18px;display:flex;
+          align-items:center;justify-content:space-between;gap:12px}
+  .bar b{font-size:15px;letter-spacing:.01em}
+  .bar a{color:var(--on-fill);text-decoration:none;font-size:14px;
+         border:1px solid rgba(255,255,255,.45);padding:3px 10px;border-radius:3px;white-space:nowrap}
+  .bar .barhome{border:0;padding:0;font-size:15px}
+  main{max-width:760px;margin:0 auto;padding:0 18px 80px}
+  .mast{padding:34px 0 26px;border-bottom:3px solid var(--accent);margin-bottom:30px}
+  .kicker{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+          font-weight:700;margin:0 0 12px}
+  h1{font-size:clamp(28px,7vw,42px);line-height:1.12;margin:0 0 12px;font-weight:700}
+  .sub{font-size:clamp(17px,4vw,21px);line-height:1.35;color:var(--ink-2);margin:0 0 20px}
+  .byline{font-size:15px;line-height:1.5;color:var(--ink-2);margin:0}
+  .byline b{color:var(--ink)}
+  section{margin:0 0 42px;scroll-margin-top:56px}
+  h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+     font-weight:700;margin:0 0 6px;padding-top:6px;border-top:2px solid var(--accent)}
+  h3{font-size:clamp(22px,5.2vw,28px);line-height:1.2;margin:0 0 16px;font-weight:700}
+  h4{font-size:17px;margin:22px 0 6px;font-weight:700}
+  p{margin:0 0 14px}
+  a{color:var(--accent)}
+  strong{color:var(--accent)}
+  .lead{font-size:19px;line-height:1.5}
+  ul{margin:0 0 14px;padding-left:20px}
+  li{margin-bottom:9px}
+  .note{font-size:14.5px;color:var(--ink-2);line-height:1.5}
+  footer{border-top:2px solid var(--grid);margin-top:30px;padding-top:20px;
+         font-size:14.5px;color:var(--ink-2);line-height:1.5}
+  .keys{display:grid;gap:12px;margin:26px 0 38px}
+  @media (min-width:620px){ .keys{grid-template-columns:repeat(3,1fr)} }
+  .key{display:block;background:var(--card);border:1px solid var(--grid);border-left:4px solid var(--accent);
+       border-radius:4px;padding:15px 16px;text-decoration:none;color:inherit;
+       box-shadow:0 1px 3px var(--shadow)}
+  .key:hover,.key:focus-visible{border-left-color:var(--series)}
+  .kn{display:block;font-size:30px;line-height:1;font-weight:700;color:var(--accent);margin-bottom:7px}
+  .kt{display:block;font-size:15px;line-height:1.35}
+  .kf{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+      color:var(--ink-2);margin-top:9px}
+  .card{display:block;background:var(--card);border:1px solid var(--grid);border-radius:4px;
+        padding:20px 22px;margin:0 0 16px;text-decoration:none;color:inherit;
+        box-shadow:0 1px 3px var(--shadow);transition:border-color .15s,transform .15s}
+  .card:hover,.card:focus-visible{border-color:var(--accent);transform:translateY(-1px)}
+  .ct{display:block;font-size:clamp(20px,4.6vw,24px);line-height:1.2;font-weight:700;
+      color:var(--accent);margin-bottom:9px}
+  .cd{display:block;font-size:16px;line-height:1.5;color:var(--ink)}
+  .cgo{display:block;margin-top:12px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;
+       font-weight:700;color:var(--series)}
+  @media (prefers-reduced-motion:reduce){ .card{transition:none} .card:hover{transform:none} }
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="bar-in">
+  <b>100% Preventable, 100% Fatal</b>
+  <a href="poster.html">The poster &rsaquo;</a>
+</div></div>
+
+<main>
+
+<div class="mast">
+  <p class="kicker">MD304 &middot; Global Health and Development &middot; e-Poster</p>
+  <h1>100% Preventable, 100% Fatal</h1>
+  <p class="sub">Barriers to rabies elimination on the road to &ldquo;Zero by 30&rdquo;</p>
+  <p class="byline"><b>Aonghus Feeney, Omer Faraz, Declan Gbinigie, Yahya Ghanem, Niamh Lernihan,
+    Aoife Leyden, Aoibhin Marren, Sanjana Mehra, Ava Reddington, Raj Tripathi</b><br>
+    School of Medicine, University of Galway</p>
+</div>
+
+<p class="lead">Rabies kills an estimated 59,000 people a year. It has been preventable for over a
+century. This poster asks why that is still true &mdash; and finds three failures of delivery, not
+one failure of science.</p>
+
+<div class="keys">
+  <a class="key" href="poster.html#f1"><span class="kn">25&times;</span>
+    <span class="kt">more deaths are modelled than are ever counted</span>
+    <span class="kf">We cannot count it</span></a>
+  <a class="key" href="poster.html#f2"><span class="kn">40.5%</span>
+    <span class="kt">of dog-bite victims complete a course of prophylaxis</span>
+    <span class="kf">People cannot reach it</span></a>
+  <a class="key" href="poster.html#f3"><span class="kn">1.5%</span>
+    <span class="kt">of rabies spending goes to the only intervention that stops transmission</span>
+    <span class="kf">We fund the consequence</span></a>
+</div>
+
+<section id="go">
+<h2>Three places to go</h2>
+
+<a class="card" href="poster.html">
+  <span class="ct">The poster, in full</span>
+  <span class="cd">The complete argument as presented, built for reading on a phone: all three
+  failures, every figure, the full search strategy, and the ten references each linked to its
+  source. Includes two interactive figures and a section on what is changing in prophylaxis that
+  would not fit on the printed A0.</span>
+  <span class="cgo">Read the poster &rsaquo;</span>
+</a>
+
+<a class="card" href="study-guide.html">
+  <span class="ct">Rabies: a revision guide</span>
+  <span class="cd">Short notes for the neglected tropical diseases material &mdash; what rabies is,
+  why the incubation period is the whole argument, the WHO exposure categories, Ireland, and the ten
+  numbers worth knowing. Twelve self-test questions at the end.</span>
+  <span class="cgo">Revise &rsaquo;</span>
+</a>
+
+<a class="card" href="resources.html">
+  <span class="ct">Further reading</span>
+  <span class="cd">Where to go next. WHO guidance and the Zero by 30 strategic plan, Irish
+  surveillance and post-exposure protocols, and the ten primary sources this poster is built
+  on, each with a direct link.</span>
+  <span class="cgo">Browse the sources &rsaquo;</span>
+</a>
+</section>
+
+<footer>
+<p><b>A caution.</b> These pages are a student project and a revision aid. They are not a clinical
+reference. For patient care, use the HPSC and NIAC guidance linked under
+<a href="resources.html">further reading</a>.</p>
+</footer>
+
+</main>
+
+</body>
+</html>

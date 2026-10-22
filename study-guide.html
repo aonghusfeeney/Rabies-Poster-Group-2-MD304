@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rabies — a revision guide</title>
+<meta name="theme-color" content="#8F1259">
+<meta name="description" content="A short revision guide to rabies and the neglected tropical diseases. Companion to an e-poster from the School of Medicine, University of Galway.">
+<style>
+  :root{
+    --tint:#F6EFE2; --page:#EFE7D6; --ink:#013C4E; --ink-2:#5A6B70;
+    --series:#00889D; --accent:#8F1259; --grid:#CFC9B6; --band:#E9D2D0;
+    --accent-fill:#8F1259; --on-fill:#FFFFFF; --card:#FFFFFF; --shadow:rgba(1,60,78,.13);
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:var(--serif);
+       font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .bar{position:sticky;top:0;z-index:20;background:var(--accent-fill);color:var(--on-fill)}
+  .bar-in{max-width:760px;margin:0 auto;padding:9px 18px;display:flex;
+          align-items:center;justify-content:space-between;gap:12px}
+  .bar b{font-size:15px;letter-spacing:.01em}
+  .bar .barhome{color:var(--on-fill);text-decoration:none;border:0;padding:0}
+  .bar a{color:var(--on-fill);text-decoration:none;font-size:14px;border:1px solid rgba(255,255,255,.45);
+         padding:3px 10px;border-radius:3px;white-space:nowrap}
+  main{max-width:760px;margin:0 auto;padding:0 18px 80px}
+  .mast{padding:34px 0 26px;border-bottom:3px solid var(--accent);margin-bottom:30px}
+  .kicker{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+          font-weight:700;margin:0 0 12px}
+  h1{font-size:clamp(28px,7vw,42px);line-height:1.12;margin:0 0 12px;font-weight:700}
+  .sub{font-size:clamp(17px,4vw,21px);line-height:1.35;color:var(--ink-2);margin:0 0 20px}
+  .byline{font-size:15px;line-height:1.5;color:var(--ink-2);margin:0}
+  .byline b{color:var(--ink)}
+  section{margin:0 0 42px;scroll-margin-top:56px}
+  h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+     font-weight:700;margin:0 0 6px;padding-top:6px;border-top:2px solid var(--accent)}
+  h3{font-size:clamp(22px,5.2vw,28px);line-height:1.2;margin:0 0 16px;font-weight:700}
+  h4{font-size:17px;margin:22px 0 6px;font-weight:700}
+  p{margin:0 0 14px}
+  a{color:var(--accent)}
+  strong{color:var(--accent)}
+  .lead{font-size:19px;line-height:1.5}
+  ul{margin:0 0 14px;padding-left:20px}
+  li{margin-bottom:9px}
+  .note{font-size:14.5px;color:var(--ink-2);line-height:1.5}
+  .punch{background:var(--accent-fill);color:var(--on-fill);padding:18px 20px;border-radius:4px;
+         font-size:19px;line-height:1.35;font-weight:700;margin:20px 0}
+  .statlist{list-style:none;padding:0;margin:14px 0}
+  .statlist li{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin-bottom:13px;
+               align-items:baseline}
+  .statlist b{color:var(--accent);font-size:19px;white-space:nowrap}
+  .card{background:var(--card);border:1px solid var(--grid);border-radius:4px;
+        padding:16px 18px;margin:18px 0;box-shadow:0 1px 3px var(--shadow)}
+  .card h4{margin-top:0}
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--grid);vertical-align:top}
+  th{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);
+     border-bottom:2px solid var(--accent)}
+  td b{color:var(--accent)}
+  details{background:var(--tint);border:1px solid var(--grid);border-radius:4px;
+          padding:0;margin:0 0 10px}
+  summary{cursor:pointer;padding:13px 16px;font-weight:700;font-size:16.5px;
+          list-style:none;line-height:1.4}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:" +";color:var(--accent);font-weight:700}
+  details[open] summary::after{content:" \2212"}
+  details[open] summary{border-bottom:1px solid var(--grid)}
+  .ans{padding:13px 16px 4px;font-size:16px}
+  .ans p{margin:0 0 12px}
+  .linklist{list-style:none;padding:0;margin:14px 0}
+  .linklist li{margin-bottom:16px}
+  .linklist a{font-weight:700;text-decoration:none;border-bottom:1px solid var(--accent)}
+  .linklist span{display:block;font-size:14.5px;color:var(--ink-2);line-height:1.45;margin-top:3px}
+  .warn{background:#FFF3CD;border:1px solid #E0C368;color:#6B5310;
+        padding:12px 15px;border-radius:4px;font-size:15px;line-height:1.5;margin:18px 0}
+  footer{border-top:2px solid var(--grid);margin-top:30px;padding-top:20px;
+         font-size:14.5px;color:var(--ink-2);line-height:1.5}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="bar-in">
+  <b><a class="barhome" href="index.html">&lsaquo; Home</a></b>
+  <a href="poster.html">The poster &rsaquo;</a>
+</div></div>
+
+<main>
+
+<div class="mast">
+  <p class="kicker">MD304 · Global Health and Development</p>
+  <h1>Rabies: a revision guide</h1>
+  <p class="sub">The short version. Rabies is one topic among many on the neglected tropical diseases
+  material, so this covers what is worth knowing and stops there.</p>
+  <p class="byline">Companion to the e-poster <b>100% Preventable, 100% Fatal: Barriers to rabies
+  elimination on the road to &ldquo;Zero by 30&rdquo;</b> &middot; School of Medicine, University of Galway</p>
+</div>
+
+<section id="use">
+<h2>How to use this</h2>
+<p>Read the notes once, then work through <a href="#test">Test yourself</a>. The questions are the
+point &mdash; recall beats re-reading. The <a href="#numbers">numbers</a> section is the only part
+worth memorising.</p>
+</section>
+
+<section id="ntd">
+<h2>Context</h2>
+<h3>What makes a disease &ldquo;neglected&rdquo;</h3>
+<p>The WHO list of neglected tropical diseases groups around twenty conditions that share a profile
+rather than a pathogen. They affect poor, rural and politically marginal populations; they cause
+chronic disability or death rather than epidemics that force a response; and they attract
+disproportionately little research funding and political attention.</p>
+<p><strong>&ldquo;Neglected&rdquo; describes our attention, not the organism.</strong> That is the
+examinable idea, and rabies is the clearest case on the list &mdash; because the tools to prevent
+every single death have existed for over a century.</p>
+</section>
+
+<section id="basics">
+<h2>The disease</h2>
+<h3>Rabies in brief</h3>
+<ul>
+<li><strong>Cause.</strong> A lyssavirus, almost always transmitted in the saliva of an infected
+animal through a bite or scratch. <strong>Dogs account for up to 99% of human cases.</strong></li>
+<li><strong>Pathogenesis.</strong> The virus travels from the wound along peripheral nerves to the
+central nervous system. It does not travel in the blood, which is why there is no useful diagnostic
+test during the incubation period.</li>
+<li><strong>Presentation.</strong> Acute progressive encephalomyelitis. Classically fever, then
+altered consciousness, then autonomic instability, hydrophobia and aerophobia; a paralytic form also
+occurs and is more often misdiagnosed.</li>
+<li><strong>Outcome.</strong> Once clinical signs appear rabies is <strong>almost invariably
+fatal</strong>, with death within days. There is no effective treatment; care is palliative.</li>
+<li><strong>Distribution.</strong> An estimated <strong>59,000</strong> deaths a year, more than 95%
+of them in Africa and Asia.</li>
+</ul>
+</section>
+
+<section id="window">
+<h2>The key concept</h2>
+<h3>The incubation period is the whole argument</h3>
+<p>Incubation is <strong>typically two to three months</strong>, exceeding a year in 2-3% of
+cases. Throughout that time the person has no symptoms. This is the one exploitable weakness in a
+disease that is otherwise always fatal.</p>
+<div class="punch">Post-exposure prophylaxis given properly and in time prevents essentially every
+death. Everything that matters about rabies happens inside that window.</div>
+
+<h4>Post-exposure prophylaxis has three components</h4>
+<ul>
+<li><strong>Wound washing</strong> with soap and water &mdash; immediate, and the step most often
+skipped</li>
+<li><strong>Rabies vaccine</strong>, as a course over days</li>
+<li><strong>Rabies immunoglobulin</strong> infiltrated into and around the wound, for the most severe
+exposures only</li>
+</ul>
+
+<h4>WHO exposure categories decide what is given</h4>
+<table>
+<tr><th>Category</th><th>Exposure</th><th>Action</th></tr>
+<tr><td><b>I</b></td><td>Touching or feeding an animal; licks on intact skin</td><td>Wash. No
+prophylaxis</td></tr>
+<tr><td><b>II</b></td><td>Nibbling of uncovered skin; minor scratches without bleeding</td><td>Wash
+and vaccinate</td></tr>
+<tr><td><b>III</b></td><td>Transdermal bites or scratches; licks on broken skin; mucous-membrane
+contamination; any bat contact</td><td>Wash, vaccinate <strong>and</strong> give
+immunoglobulin</td></tr>
+</table>
+<p class="note">Source: WHO Expert Consultation on Rabies, Technical Report Series 1012. Worth
+knowing that bat exposure is category III regardless of how trivial the contact looks.</p>
+
+<h4>Regimens are getting shorter</h4>
+<p>Intradermal administration uses a fraction of a vial per patient instead of a whole one, so the
+same vaccine supply treats far more people. The WHO-recommended <strong>one-week intradermal
+regimen requires only three clinic visits</strong>, against four or five for older intramuscular
+schedules.</p>
+</section>
+
+<section id="gap">
+<h2>The global health argument</h2>
+<h3>Why a preventable disease still kills</h3>
+<p>This is our poster's angle, and it is the part most likely to be useful in an exam answer, because
+it converts rabies from a microbiology question into a health-systems one. Three failures:</p>
+
+<div class="card">
+<h4>1. We cannot count it</h4>
+<p>Two current estimates of the same quantity do not overlap. The modelled figure is
+<strong>59,000</strong> deaths a year (95% CI 25,000-159,200); the Global Burden of Disease
+study gives <strong>10,181</strong> cases for 2021 (95% UI 6,080-14,293). No single value is
+consistent with both.</p>
+<p>Meanwhile <strong>2,301</strong> deaths were reported to WHO for 2024, from <strong>79 of 194</strong>
+member states. If you cannot measure a disease you cannot prioritise it, budget for it, or ever
+demonstrate elimination.</p>
+</div>
+
+<div class="card">
+<h4>2. People cannot reach prophylaxis</h4>
+<p>In a nationwide Indian survey of dog-bite victims, 83.6% reached a health facility, 79.5% received
+at least one vaccine dose, 66.2% received at least three &mdash; and <strong>40.5% completed the
+course</strong>. Four in five start; two in five finish.</p>
+<p>The most commonly reported barrier across 20 countries of the WHO African Region was not cost but
+<strong>not knowing rabies was treatable</strong> (16 of 20), then no facility within reach (14) and
+use of traditional medicine (13). Cost ranked sixth of eight &mdash; which matters, because awareness
+is cheaper to fix than subsidy.</p>
+<p>Immunoglobulin reached <strong>61 of 546</strong> Indian patients with severe wounds (11.2%), and
+only <strong>5 of 20</strong> African countries have any immunoglobulin product licensed or in use.</p>
+</div>
+
+<div class="card">
+<h4>3. We fund the consequence, not the cause</h4>
+<p>Rabies costs about <strong>US$8.6 billion</strong> a year. Premature death accounts for 55.2%,
+prophylaxis 20.1%, income lost seeking prophylaxis 15.5%, livestock losses 6.0% &mdash; roughly 98%
+of the burden falls <em>after</em> transmission has already happened.</p>
+<p><strong>Dog vaccination, the only intervention that interrupts transmission, receives 1.5%.</strong>
+Laboratory surveillance receives 0.009%. Latin America is the exception at 17%, and dog-mediated
+rabies has since been eliminated from several Latin American countries.</p>
+</div>
+
+<p>The single finding that ties the three together: of <strong>89 laboratory-confirmed rabies deaths
+in people who had received prophylaxis, only three were true breakthrough infections</strong>. The
+rest had delayed initiation, undocumented wound care, missing immunoglobulin or incomplete schedules.</p>
+<div class="punch">The vaccine is not failing. The delivery is.</div>
+</section>
+
+<section id="ireland">
+<h2>Local relevance</h2>
+<h3>Ireland is rabies-free, not risk-free</h3>
+<ul>
+<li>No terrestrial rabies since <strong>1903</strong>, but classified <strong>low risk rather than no
+risk</strong>, because European bat lyssaviruses circulate across Europe and all Irish bats are
+considered potential hosts.</li>
+<li><strong>150-200</strong> potential exposures are assessed in Ireland each year. More than
+95% follow exposure to an animal abroad, mainly dogs.</li>
+<li>Around <strong>80%</strong> of those presenting have already started prophylaxis overseas and
+attend to complete the course &mdash; so Irish practice sits downstream of prophylaxis systems in
+endemic countries.</li>
+</ul>
+<p class="note">A useful exam point: a rabies-free country still needs a functioning exposure
+assessment pathway, because risk is imported rather than absent.</p>
+</section>
+
+<section id="zero">
+<h2>Policy</h2>
+<h3>Zero by 30</h3>
+<p>In 2018 WHO, FAO, WOAH (then OIE) and the Global Alliance for Rabies Control committed, under the
+<em>United Against Rabies</em> partnership, to <strong>zero human deaths from dog-mediated rabies by
+2030</strong>. Note the precise wording &mdash; not zero rabies, and dog-mediated only.</p>
+<p>WHO's own current assessment is that the goal is <strong>&ldquo;still achievable in some
+countries&rdquo;</strong>. Three countries have been validated for elimination of dog-mediated human
+rabies: Bhutan, Chile and Mexico.</p>
+<p>Modelling across 67 rabies-endemic countries found that expanding free prophylaxis with the
+one-week intradermal regimen would avert an <strong>additional 494,700 deaths</strong> by 2035 while
+total projected expenditure <em>fell</em> by US$32.5 million &mdash; because intradermal dosing splits
+a vial, so <strong>17.4 million more people are vaccinated on the same ~73 million vials</strong>.</p>
+</section>
+
+<section id="numbers">
+<h2>Memorise these</h2>
+<h3>Numbers worth knowing</h3>
+<ul class="statlist">
+<li><b>~99%</b><span>of human cases are dog-mediated</span></li>
+<li><b>59,000</b><span>estimated deaths a year (95% CI 25,000-159,200); &gt;95% in Africa and Asia</span></li>
+<li><b>2-3 months</b><span>typical incubation; &gt;1 year in 2-3% of cases</span></li>
+<li><b>~100%</b><span>case fatality once symptoms appear; ~100% preventable before they do</span></li>
+<li><b>I / II / III</b><span>WHO exposure categories &mdash; III adds immunoglobulin</span></li>
+<li><b>3 visits</b><span>one-week intradermal regimen</span></li>
+<li><b>40.5%</b><span>of Indian dog-bite victims completed the course</span></li>
+<li><b>1.5%</b><span>of the US$8.6 billion annual cost goes to dog vaccination</span></li>
+<li><b>3 of 89</b><span>deaths after prophylaxis were true vaccine failures</span></li>
+<li><b>2030</b><span>target date for zero human deaths from dog-mediated rabies</span></li>
+</ul>
+</section>
+
+<section id="test">
+<h2>Recall practice</h2>
+<h3>Test yourself</h3>
+<p class="note">Answer out loud before tapping. Twelve questions.</p>
+
+<details><summary>1. Why is the incubation period clinically important?</summary>
+<div class="ans"><p>It is the only window in which the disease can be stopped. The virus travels along
+peripheral nerves to the CNS over weeks to months, during which the person is asymptomatic and
+prophylaxis is still effective. Once it reaches the CNS and symptoms begin, rabies is almost
+invariably fatal.</p></div></details>
+
+<details><summary>2. Name the three components of post-exposure prophylaxis.</summary>
+<div class="ans"><p>Wound washing with soap and water; rabies vaccine; and rabies immunoglobulin
+infiltrated into and around the wound for category III exposures.</p></div></details>
+
+<details><summary>3. A patient is licked on intact skin by a stray dog. What category, and what do you give?</summary>
+<div class="ans"><p>Category I. Wash the area; no prophylaxis indicated.</p></div></details>
+
+<details><summary>4. A patient has a minor scratch from a bat, no bleeding. What category?</summary>
+<div class="ans"><p><strong>Category III</strong> &mdash; any bat contact is category III regardless of
+how minor it appears. Wash, vaccinate and give immunoglobulin. The trap here is grading it as II on
+the basis of the wound alone.</p></div></details>
+
+<details><summary>5. Why does intradermal administration matter so much?</summary>
+<div class="ans"><p>It uses a fraction of a vial per patient rather than a whole one, so the same
+vaccine supply treats far more people &mdash; in one model, 17.4 million more people on the same
+~73 million vials. It also shortens the course to three visits. The efficiency gain requires no new
+product, which is why non-adoption is a delivery failure rather than a technological one.</p></div></details>
+
+<details><summary>6. What does it mean that two burden estimates &ldquo;do not overlap&rdquo;?</summary>
+<div class="ans"><p>The modelled estimate is 59,000 deaths (95% CI 25,000-159,200); the Global
+Burden of Disease figure is 10,181 cases (95% UI 6,080-14,293). The intervals share no common
+value, so no single true figure is consistent with both. The disagreement is itself the finding.</p></div></details>
+
+<details><summary>7. Why can't rabies deaths simply be counted?</summary>
+<div class="ans"><p>Deaths occur within about a week, mostly in rural areas, often at home and outside
+any health system, and there are no survivors to count backwards from. There is no chronic phase and
+no case register. Surveillance captures a fraction: 2,301 deaths reported to WHO for 2024, from
+79 of 194 member states.</p></div></details>
+
+<details><summary>8. What was the most commonly reported barrier to prophylaxis in the WHO African Region, and why is that surprising?</summary>
+<div class="ans"><p>Not knowing rabies was treatable &mdash; reported by 16 of 20 countries. Cost ranked
+sixth of eight. It is surprising because a course can run to 31 days' wages in Asia and 51 in Africa,
+so cost is severe where it applies. But it is not what ministries name first, and that changes what
+you would fund: awareness is cheaper than subsidy.</p></div></details>
+
+<details><summary>9. If prophylaxis is nearly 100% effective, why do people still die after receiving it?</summary>
+<div class="ans"><p>Almost always because of delivery failure rather than vaccine failure. Of 89
+laboratory-confirmed deaths in people who had received prophylaxis, only three were true breakthrough
+infections; the rest had delayed initiation, undocumented wound care, missing immunoglobulin or
+incomplete schedules.</p></div></details>
+
+<details><summary>10. Why is spending on dog vaccination the central economic argument?</summary>
+<div class="ans"><p>It is the only intervention that interrupts transmission, and it receives about
+1.5% of the US$8.6 billion annual cost, while roughly 98% of that cost falls after transmission has
+already occurred. Vaccinating the dog protects everyone it would have bitten; treating the person
+saves one life and leaves the dog circulating.</p></div></details>
+
+<details><summary>11. Why does a rabies-free country still need a rabies pathway?</summary>
+<div class="ans"><p>Because risk is imported rather than absent. Ireland has had no terrestrial
+rabies since 1903 but is classified low risk rather than no risk, because bat lyssaviruses circulate
+in Europe. 150-200 exposures are assessed annually, more than 95% acquired abroad, and around
+80% of those presenting are completing a course started overseas.</p></div></details>
+
+<details><summary>12. State the Zero by 30 target precisely.</summary>
+<div class="ans"><p>Zero human deaths from <strong>dog-mediated</strong> rabies by 2030 &mdash; set in
+2018 by WHO, FAO, WOAH and the Global Alliance for Rabies Control under United Against Rabies. Not
+zero rabies, and not all reservoirs. WHO currently describes it as &ldquo;still achievable in some
+countries&rdquo;.</p></div></details>
+</section>
+
+<section id="reading">
+<h2>Go deeper</h2>
+<h3>Further reading</h3>
+<ul class="linklist">
+<li><a href="https://www.who.int/news-room/fact-sheets/detail/rabies">WHO rabies fact sheet</a>
+<span>The quickest authoritative overview &mdash; transmission, prophylaxis, elimination status. Two
+pages, updated September 2026.</span></li>
+
+<li><a href="https://www.who.int/westernpacific/publications/i/item/who-wer10119-78-86">Rabies
+prevention and control in the WHO African Region</a>
+<span><em>Weekly Epidemiological Record</em> 2026;101(19):78-86. The source for most of the
+access and financing figures above, including the barrier rankings.</span></li>
+
+<li><a href="https://www.who.int/publications-detail-redirect/9789241513838">Zero by 30: the global
+strategic plan</a>
+<span>The target itself, its objectives and its signatories. Also hosted by
+<a href="https://www.woah.org/en/document/zero_by_30_final_130618/">WOAH</a>.</span></li>
+
+<li><a href="https://rabiesalliance.org">Global Alliance for Rabies Control</a>
+<span>Country profiles, the stepwise elimination tool, and the clearest plain-language explanations of
+how elimination programmes actually work.</span></li>
+
+<li><a href="https://www.hpsc.ie/a-z/zoonotic/rabies">HPSC &mdash; rabies (Ireland)</a>
+<span>Irish surveillance and guidance. The
+<a href="https://www.hpsc.ie/a-z/zoonotic/rabies/guidance/Guidelines%20on%20Post-exposure%20Assessment%20and%20Treatment%20of%20Rabies-prone%20Exposures.pdf">post-exposure
+assessment and treatment guidelines</a> are the operational pathway used here.</span></li>
+
+<li><a href="https://www.hse.ie/eng/health/immunisation/news/rabies.html">HSE immunisation &mdash;
+rabies</a>
+<span>Irish vaccine schedule position, plus the
+<a href="https://www.hiqa.ie/sites/default/files/NIAC/Recommendations_and_Advice/2025/20251208_Protocol_NIAC-Updated-recommendations-regarding-rabies-vaccines-2025.pdf">NIAC
+2025 updated recommendations</a>.</span></li>
+</ul>
+</section>
+
+<footer>
+<p><b>Sources.</b> Figures are drawn from the ten references cited on the e-poster &mdash; principally
+the WHO Expert Consultation on Rabies (Technical Report Series 1012, 2018), the <em>Weekly
+Epidemiological Record</em> 2026;101(19):78-86, Hampson et al. (<em>PLoS Negl Trop Dis</em>
+2015;9:e0003709), Thangaraj et al. (<em>Lancet Infect Dis</em> 2025;25:126-134), the WHO Rabies
+Modelling Consortium (<em>Lancet Infect Dis</em> 2019;19:102-111) and Lodha et al. (<em>Clin
+Infect Dis</em> 2026;83:139-146). The full list with links is on
+<a href="poster.html">the poster companion page</a>.</p>
+</footer>
+
+</main>
+</body>
+</html>
