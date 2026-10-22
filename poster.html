@@ -1,0 +1,1274 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>100% Preventable, 100% Fatal — rabies and the delivery gap</title>
+<meta property="og:title" content="100% Preventable, 100% Fatal">
+<meta property="og:description" content="Rabies, the measurement gap, and the road to Zero by 30. Companion to an e-poster from the School of Medicine, University of Galway.">
+<meta property="og:type" content="article">
+<meta name="theme-color" content="#8F1259">
+<meta name="description" content="Companion web version of an e-poster on rabies, the measurement gap and the 2030 elimination target. School of Medicine, University of Galway.">
+<style>
+  :root{
+    --tint:#F6EFE2; --page:#EFE7D6; --ink:#013C4E; --ink-2:#5A6B70;
+    --series:#00889D; --accent:#8F1259; --grid:#CFC9B6; --band:#E9D2D0;
+    --accent-fill:#8F1259; --on-fill:#FFFFFF; --card:#FFFFFF; --shadow:rgba(1,60,78,.13);
+    --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+    --codebg:#EDE4D2;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--page);color:var(--ink);font-family:var(--serif);
+       font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+
+  /* ---------- shell ---------- */
+  .bar{position:sticky;top:0;z-index:20;background:var(--accent-fill);color:var(--on-fill)}
+  .bar-in{max-width:760px;margin:0 auto;padding:9px 18px;display:flex;
+          align-items:center;justify-content:space-between;gap:12px}
+  .bar b{font-size:15px;letter-spacing:.01em}
+  .bar .barhome{color:var(--on-fill);text-decoration:none;border:0;padding:0}
+  .bar a{color:var(--on-fill);text-decoration:none;font-size:14px;border:1px solid rgba(255,255,255,.45);
+         padding:3px 10px;border-radius:3px;white-space:nowrap}
+  main{max-width:760px;margin:0 auto;padding:0 18px 80px}
+
+  /* ---------- masthead ---------- */
+  .mast{padding:34px 0 26px;border-bottom:3px solid var(--accent);margin-bottom:30px}
+  .kicker{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+          font-weight:700;margin:0 0 12px}
+  h1{font-size:clamp(28px,7vw,42px);line-height:1.12;margin:0 0 12px;font-weight:700}
+  .sub{font-size:clamp(17px,4vw,21px);line-height:1.35;color:var(--ink-2);margin:0 0 20px}
+  .byline{font-size:15px;line-height:1.5;color:var(--ink-2);margin:0}
+  .byline b{color:var(--ink)}
+  .todo{background:#FFF3CD;border:1px solid #E0C368;color:#6B5310;
+        padding:10px 13px;border-radius:4px;font-size:14.5px;line-height:1.45;margin:14px 0 0}
+
+  /* ---------- sections ---------- */
+  section{margin:0 0 42px;scroll-margin-top:56px}
+  h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);
+     font-weight:700;margin:0 0 6px;padding-top:6px;border-top:2px solid var(--accent)}
+  h3{font-size:clamp(22px,5.2vw,28px);line-height:1.2;margin:0 0 16px;font-weight:700}
+  h4{font-size:17px;margin:22px 0 6px;font-weight:700}
+  p{margin:0 0 14px}
+  a{color:var(--accent)}
+  strong{color:var(--accent)}
+  .lead{font-size:19px;line-height:1.5}
+  ul{margin:0 0 14px;padding-left:20px}
+  li{margin-bottom:9px}
+  .note{font-size:14.5px;color:var(--ink-2);line-height:1.5}
+  sup{font-size:.68em;line-height:0}
+  sup a{text-decoration:none;padding:0 1px}
+
+  /* ---------- pull panel ---------- */
+  .punch{background:var(--accent-fill);color:var(--on-fill);padding:18px 20px;border-radius:4px;
+         font-size:19px;line-height:1.35;font-weight:700;margin:20px 0}
+  .quote{border-left:4px solid var(--accent);padding:2px 0 2px 16px;margin:20px 0}
+  .quote p{margin:0}
+  .quote cite{display:block;margin-top:8px;font-style:normal;font-size:13px;
+              letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+
+  /* ---------- stat block ---------- */
+  .stats{display:flex;align-items:center;gap:14px;margin:6px 0 8px}
+  .stats .n{font-size:clamp(30px,8vw,42px);font-weight:700;line-height:1;white-space:nowrap}
+  .stats .n.hi{color:var(--accent)}
+  .ratio{flex:1;display:flex;align-items:center;gap:8px;color:var(--accent);
+         font-weight:700;font-size:15px;line-height:1;white-space:nowrap}
+  .ratio::before,.ratio::after{content:"";flex:1;height:2px;background:var(--accent);min-width:8px}
+  .statlist{list-style:none;padding:0;margin:14px 0}
+  .statlist li{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin-bottom:13px;
+               align-items:baseline}
+  .statlist b{color:var(--accent);font-size:19px;white-space:nowrap}
+
+  /* ---------- charts ---------- */
+  figure{margin:22px 0;background:var(--tint);border:1px solid var(--grid);
+         border-radius:4px;padding:16px 15px 14px}
+  .ptag{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);
+        font-weight:700;margin:0 0 14px;line-height:1.4}
+  .ptag + .ptag{margin-top:26px}
+  .plot + .ptag{margin-top:28px}
+  .plot{position:relative}
+  .crow{margin-bottom:13px;position:relative;z-index:1}
+  .clab{display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+        font-size:15px;margin-bottom:4px;line-height:1.3}
+  .clab .cv{font-weight:700;white-space:nowrap}
+  .clab .cv.hi{color:var(--accent)}
+  .ctrack{position:relative;height:17px}
+  .ctrack.slim{height:11px}
+  .cbar{position:absolute;top:50%;transform:translateY(-50%);height:11px;background:var(--series)}
+  .cbar.hi{background:var(--accent)}
+  .cbar.slim{height:8px}
+  .cint{position:absolute;top:50%;transform:translateY(-50%);height:4px;background:var(--series)}
+  .cint::before,.cint::after{content:"";position:absolute;top:-5px;width:3px;height:14px;
+        background:var(--series)}
+  .cint::before{left:0}.cint::after{right:0}
+  .cdot{position:absolute;top:50%;width:13px;height:13px;border-radius:50%;
+        background:var(--series);border:2px solid var(--tint);transform:translate(-50%,-50%)}
+  .cdot.ink{background:var(--ink)}
+  .carrow{position:absolute;top:50%;transform:translateY(-50%);height:4px;background:var(--series)}
+  .carrow::after{content:"";position:absolute;right:-1px;top:-6px;border-left:11px solid var(--series);
+        border-top:8px solid transparent;border-bottom:8px solid transparent}
+  .cband{position:absolute;top:0;bottom:0;z-index:0;background:rgba(143,18,89,.055);
+         border-left:1.5px dashed var(--accent);border-right:1.5px dashed var(--accent)}
+  /* ---------- PRISMA flow ---------- */
+  .prisma{margin:14px 0 18px}
+  .prow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.72fr);
+        gap:10px 14px;align-items:start;padding-bottom:30px}
+  .prow.last{padding-bottom:0}
+  .pbox,.pside{border-radius:4px;padding:10px 12px;font-size:14.5px;line-height:1.35}
+  .pbox{position:relative;background:var(--card);border:1.5px solid var(--accent);
+        box-shadow:0 1px 2px var(--shadow)}
+  .prow:not(.last) .pbox::after{content:"";position:absolute;left:50%;bottom:-25px;
+        width:2px;height:19px;background:var(--grid);transform:translateX(-50%)}
+  .prow:not(.last) .pbox::before{content:"";position:absolute;left:50%;bottom:-30px;
+        border-top:7px solid var(--grid);border-left:5px solid transparent;
+        border-right:5px solid transparent;transform:translateX(-50%)}
+  .pbox.hi{background:var(--accent-fill);color:var(--on-fill);border-color:var(--accent-fill)}
+  .pside{background:var(--tint);border:1px dashed var(--grid);color:var(--ink-2)}
+  .pbox b,.pside b{display:block;font-size:21px;line-height:1.1;margin-bottom:2px}
+  .pbox b{color:var(--accent)}
+  .pbox.hi b{color:var(--on-fill)}
+  .pside b{color:var(--ink-2)}
+  @media (max-width:560px){ .prow{grid-template-columns:1fr} }
+
+  .csub{font-size:13.5px;color:var(--ink-2);margin-top:3px;line-height:1.35}
+  .caxis{position:relative;height:19px;margin-top:6px;border-top:1.5px solid var(--ink);
+         font-size:12.5px;color:var(--ink-2)}
+  .caxis span{position:absolute;top:3px;transform:translateX(-50%);white-space:nowrap}
+  .caxis span.s0{transform:none;left:0}
+  .caxis span.s9{transform:translateX(-100%)}
+  .callout{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.05em;
+           text-transform:uppercase;margin:10px 0 12px;line-height:1.4}
+  figcaption{font-size:13.5px;color:var(--ink-2);line-height:1.5;margin-top:14px;
+             border-top:1px solid var(--grid);padding-top:11px}
+  figcaption b{color:var(--ink)}
+
+  /* ---------- disclosure ---------- */
+  details{background:var(--tint);border:1px solid var(--grid);border-radius:4px;
+          padding:0;margin:16px 0}
+  summary{cursor:pointer;padding:13px 15px;font-weight:700;font-size:15.5px;list-style:none;
+          display:flex;justify-content:space-between;gap:12px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--accent);font-size:21px;line-height:1}
+  details[open] summary::after{content:"–"}
+  .dbody{padding:0 15px 14px;font-size:15.5px}
+  .dbody p:last-child,.dbody ul:last-child{margin-bottom:0}
+  code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:13px;
+       background:var(--codebg);padding:1px 5px;border-radius:2px;word-break:break-word}
+  pre{background:var(--codebg);padding:11px 13px;border-radius:3px;overflow-x:auto;
+      font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12.5px;
+      line-height:1.5;margin:0 0 13px}
+
+  /* ---------- web-only flag ---------- */
+  .weblabel{display:inline-block;background:var(--accent-fill);color:var(--on-fill);font-size:11px;
+            letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+            padding:3px 8px;border-radius:3px;margin-bottom:10px}
+
+
+  /* ---------- interactive ---------- */
+  .ix{background:var(--card);border:2px solid var(--accent);border-radius:5px;padding:16px 16px 18px;margin:22px 0}
+  .ix .weblabel{margin-bottom:8px}
+  .ix h4{margin:0 0 4px;font-size:19px}
+  .ix .why{font-size:14.5px;color:var(--ink-2);margin:0 0 16px;line-height:1.45}
+  .ixtick{position:relative;height:17px;margin:2px 0 0;font-size:12px;color:var(--ink-2)}
+  .ixtick i{position:absolute;top:0;width:2px;height:7px;background:var(--ink-2);
+            transform:translateX(-50%)}
+  .ixtick span{position:absolute;top:7px;transform:translateX(-50%);white-space:nowrap}
+  .crow.ixbase{opacity:.62}
+  .crow.ixbase .cbar{background:var(--ink-2)}
+  .ixctl label{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+               color:var(--accent);font-weight:700;margin-bottom:8px}
+  .ixval{font-size:30px;font-weight:700;line-height:1;margin-bottom:2px}
+  .ixunit{font-size:14px;color:var(--ink-2);margin-bottom:12px}
+  input[type=range]{width:100%;accent-color:#8F1259;height:26px;margin:0 0 4px}
+  .ixends{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-2);margin-bottom:16px}
+  .ixout{border-top:1px solid var(--grid);padding-top:14px}
+  .ixbars .crow{margin-bottom:11px}
+  .ixnow .cbar{background:var(--accent);transition:width .18s ease-out}
+  .ixverdict{font-size:16.5px;line-height:1.45;margin:14px 0 0;padding:12px 14px;border-radius:4px;
+             background:var(--tint);border-left:4px solid var(--accent)}
+  .ixverdict b{color:var(--accent)}
+  @media (prefers-reduced-motion:reduce){ .ixnow .cbar{transition:none} }
+
+
+  sup a{cursor:pointer;border-bottom:1px dotted var(--accent)}
+
+  /* ---------- reference sheet ---------- */
+  .rs-back{position:fixed;inset:0;background:rgba(1,60,78,.45);z-index:40;opacity:0;
+           pointer-events:none;transition:opacity .18s}
+  .rs-back.on{opacity:1;pointer-events:auto}
+  .rs{position:fixed;left:0;right:0;bottom:0;z-index:41;background:var(--tint);
+      border-top:3px solid var(--accent);border-radius:10px 10px 0 0;padding:18px 18px 24px;
+      max-height:72vh;overflow-y:auto;transform:translateY(102%);transition:transform .22s ease-out;
+      box-shadow:0 -6px 26px rgba(0,0,0,.18)}
+  .rs.on{transform:translateY(0)}
+  .rs-hd{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:12px}
+  .rs-hd b{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--accent)}
+  .rs-x{background:none;border:1px solid var(--grid);border-radius:4px;font:inherit;font-size:15px;
+        color:var(--ink-2);cursor:pointer;padding:4px 12px;line-height:1.2}
+  .rs-body{font-size:16px;line-height:1.5}
+  @media (min-width:700px){ .rs{left:50%;right:auto;transform:translate(-50%,102%);width:640px;
+      border-radius:10px;bottom:24px;border:3px solid var(--accent)}
+    .rs.on{transform:translate(-50%,0)} }
+  @media (prefers-reduced-motion:reduce){ .rs,.rs-back{transition:none} }
+
+  /* ---------- calculator ---------- */
+  .calc-in{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:6px}
+  .calc-in input{font:inherit;font-size:22px;font-weight:700;width:9.5em;padding:7px 10px;
+       border:2px solid var(--grid);border-radius:4px;background:var(--card);color:var(--ink)}
+  .calc-in input:focus{outline:none;border-color:var(--accent)}
+  .presets{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 16px}
+  .presets button{font:inherit;font-size:13.5px;padding:5px 11px;border:1px solid var(--accent);
+       background:none;color:var(--accent);border-radius:14px;cursor:pointer}
+  .presets button:hover{background:var(--accent-fill);color:var(--on-fill)}
+  .calcrow{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:baseline;
+       padding:9px 0;border-bottom:1px solid var(--grid)}
+  .calcrow:last-of-type{border-bottom:none}
+  .calcrow .cn{font-size:21px;font-weight:700;white-space:nowrap}
+  .calcrow.lost{color:var(--accent)}
+  .calcrow.lost .cn{color:var(--accent)}
+
+
+  /* ---------- skip link, focus ---------- */
+  .skip{position:absolute;left:-9999px;top:0;background:var(--accent-fill);color:var(--on-fill);
+        padding:10px 16px;z-index:60}
+  .skip:focus{left:0}
+  :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:2px}
+
+  /* ---------- reading progress ---------- */
+  .prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:30;
+        transition:width .1s linear}
+  @media (prefers-reduced-motion:reduce){.prog{transition:none}}
+
+  /* ---------- nav drawer ---------- */
+  .navbtn{background:none;border:1px solid rgba(255,255,255,.45);color:var(--on-fill);
+          font:inherit;font-size:14px;padding:3px 10px;border-radius:3px;cursor:pointer}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:42;background:var(--tint);
+       border-bottom:3px solid var(--accent);padding:14px 18px 18px;max-height:86vh;overflow-y:auto;
+       transform:translateY(-102%);transition:transform .22s ease-out;box-shadow:0 6px 24px var(--shadow)}
+  .nav.on{transform:translateY(0)}
+  .nav ol{list-style:none;counter-reset:n;padding:0;margin:0}
+  .nav li{counter-increment:n;border-bottom:1px solid var(--grid)}
+  .nav li:last-child{border-bottom:none}
+  .nav a{display:flex;gap:12px;align-items:baseline;padding:11px 2px;text-decoration:none;color:var(--ink)}
+  .nav a::before{content:counter(n,decimal-leading-zero);font-size:12px;color:var(--accent);
+                 font-weight:700;min-width:22px}
+  .nav a.here{font-weight:700;color:var(--accent)}
+  .nav-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .nav-hd b{font-size:12.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--accent)}
+  .themebtn{background:none;border:1px solid var(--grid);border-radius:4px;font:inherit;
+            font-size:13.5px;color:var(--ink-2);cursor:pointer;padding:5px 11px}
+  @media (prefers-reduced-motion:reduce){.nav{transition:none}}
+
+  /* ---------- the 20-second version ---------- */
+  .keys{display:grid;gap:10px;margin:22px 0 4px}
+  @media (min-width:620px){.keys{grid-template-columns:repeat(3,1fr)}}
+  .key{display:block;background:var(--card);border:1px solid var(--grid);border-left:5px solid var(--accent);
+       border-radius:4px;padding:14px 15px;text-decoration:none;color:inherit;box-shadow:0 1px 3px var(--shadow)}
+  .key .kn{font-size:31px;font-weight:700;line-height:1.05;color:var(--accent);display:block}
+  .key .kt{font-size:15px;line-height:1.4;color:var(--ink);display:block;margin-top:5px}
+  .key .kf{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);
+           display:block;margin-top:9px}
+
+  /* ---------- cite ---------- */
+  .cite{background:var(--tint);border:1px solid var(--grid);border-radius:4px;padding:14px 15px;
+        font-size:14.5px;line-height:1.5}
+
+  /* ---------- dark ---------- */
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --tint:#123640; --page:#0D272F; --ink:#EDE6D8; --ink-2:#A3B3B8;
+      --series:#3FB6C9; --accent:#EE92BC; --grid:#26454F; --band:#3E2333;
+      --accent-fill:#7A1450; --on-fill:#F6EFE2; --card:#16404B; --shadow:rgba(0,0,0,.4);
+      --codebg:#0A1F26;
+    }
+  }
+  :root[data-theme="dark"]{
+    --tint:#123640; --page:#0D272F; --ink:#EDE6D8; --ink-2:#A3B3B8;
+    --series:#3FB6C9; --accent:#EE92BC; --grid:#26454F; --band:#3E2333;
+    --accent-fill:#7A1450; --on-fill:#F6EFE2; --card:#16404B; --shadow:rgba(0,0,0,.4);
+      --codebg:#0A1F26;
+  }
+  :root[data-theme="dark"] .todo{background:#3A3212;border-color:#6B5D24;color:#F0E3B0}
+
+  /* ---------- print ---------- */
+  @media print{
+    .bar,.nav,.rs,.rs-back,.prog,.skip,.todo,.presets,.navbtn{display:none!important}
+    body{background:#fff;color:#000;font-size:10.5pt}
+    main{max-width:none;padding:0}
+    section{break-inside:auto;margin-bottom:20pt}
+    figure,.ix,.punch,.quote,.keys{break-inside:avoid}
+    details>*:not(summary){display:block!important}
+    summary::after{content:""}
+    a{color:#000;text-decoration:none}
+    ol.refs a[href^="http"]::after{content:" — " attr(href);font-size:8.5pt;color:#444}
+    .punch{background:#fff!important;color:#000!important;border:2pt solid #8F1259;
+           padding:8pt 10pt;font-size:12pt}
+    .weblabel{background:#fff!important;color:#8F1259!important;border:1pt solid #8F1259}
+  }
+
+
+  /* ---------- cohort animation ---------- */
+  .cohort{background:var(--card);border:2px solid var(--accent);border-radius:5px;
+          padding:16px 16px 18px;margin:22px 0}
+  .cgrid{display:grid;grid-template-columns:repeat(40,1fr);gap:2px;margin:14px 0 0}
+  .cgrid i{display:block;aspect-ratio:1;border-radius:50%;background:var(--series);
+           transition:background-color .75s ease-out}
+  .cgrid i.gone{background:var(--grid)}
+  .cgrid i.stopped{background:var(--accent)}
+  .ccap{font-size:16.5px;line-height:1.4;margin:14px 0 0;min-height:3.1em}
+  .ccap b{color:var(--accent)}
+  .clegend{display:flex;flex-wrap:wrap;gap:6px 16px;margin:12px 0 0;font-size:13.5px;
+           color:var(--ink-2);opacity:0;transition:opacity .5s}
+  .clegend.on{opacity:1}
+  .clegend span{display:flex;align-items:center;gap:6px}
+  .clegend i{width:11px;height:11px;border-radius:50%;display:block}
+  .cplay{background:var(--accent-fill);color:var(--on-fill);border:none;border-radius:4px;
+         font:inherit;font-size:15px;font-weight:700;padding:9px 18px;cursor:pointer;margin-top:14px}
+  @media (prefers-reduced-motion:reduce){ .cgrid i{transition:none} .clegend{transition:none} }
+
+  /* ---------- references ---------- */
+  ol.refs{padding-left:0;list-style:none;counter-reset:r;margin:0}
+  ol.refs li{counter-increment:r;display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;
+             margin-bottom:14px;font-size:15px;line-height:1.45}
+  ol.refs li::before{content:counter(r) ".";font-weight:700;color:var(--accent)}
+  ol.refs a{display:inline-block;margin-top:3px;font-size:13.5px}
+
+  footer{border-top:2px solid var(--accent);padding-top:20px;font-size:14px;color:var(--ink-2)}
+  a{overflow-wrap:anywhere}
+  ol.refs a{word-break:break-word}
+  .clab span:first-child{min-width:0}
+  @media (max-width:430px){
+    .stats{display:grid;grid-template-columns:1fr;gap:7px;text-align:center;margin:10px 0}
+    .ratio{justify-content:center}
+    .stats .n{font-size:34px}
+    .statlist li{grid-template-columns:1fr;gap:2px}
+    .statlist b{font-size:20px}
+  }
+  @media (min-width:700px){ body{font-size:18px} .crow{margin-bottom:15px} }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#abstract">Skip to content</a>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="bar"><div class="bar-in">
+  <b><a class="barhome" href="index.html">&lsaquo; Home</a></b>
+  <button class="navbtn" id="navBtn" type="button" aria-expanded="false" aria-controls="nav">Contents</button>
+</div></div>
+
+<nav class="nav" id="nav" aria-label="Sections" hidden>
+  <div class="nav-hd"><b>Jump to</b>
+    <button class="themebtn" id="themeBtn" type="button">Dark mode</button></div>
+  <ol>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#intro">Background</a></li>
+    <li><a href="#methods">Methods &amp; search strategy</a></li>
+    <li><a href="#f1">Failure 1 — we cannot count it</a></li>
+    <li><a href="#f2">Failure 2 — people cannot reach it</a></li>
+    <li><a href="#f3">Failure 3 — we fund the consequence</a></li>
+    <li><a href="#changing">What is changing</a></li>
+    <li><a href="#ireland">Ireland and the traveller</a></li>
+    <li><a href="#limits">Limitations</a></li>
+    <li><a href="#further">Further research</a></li>
+    <li><a href="#conclusions">Conclusions</a></li>
+    <li><a href="#refs">References</a></li>
+    <li><a href="#ack">Acknowledgements</a></li>
+    <li><a href="study-guide.html"><b>Revision guide</b></a></li>
+    <li><a href="resources.html"><b>Further reading</b></a></li>
+  </ol>
+</nav>
+
+<main>
+
+  <header class="mast">
+    <p class="kicker">MD304 Global Health &amp; Development · e-Poster</p>
+    <h1>100% Preventable, 100% Fatal</h1>
+    <p class="sub">Barriers to rabies elimination on the road to “Zero by 30”</p>
+    <p class="byline"><b>Aonghus Feeney, Omer Faraz, Declan Gbinigie, Yahya Ghanem, Niamh Lernihan,
+      Aoife Leyden, Aoibhin Marren, Sanjana Mehra, Ava Reddington, Raj Tripathi</b><br>
+      School of Medicine, University of Galway</p>
+  </header>
+
+
+  <div class="keys">
+    <a class="key" href="#f1"><span class="kn">25×</span>
+      <span class="kt">more deaths are modelled than are ever counted</span>
+      <span class="kf">Failure 1 · we cannot count it</span></a>
+    <a class="key" href="#f2"><span class="kn">40.5%</span>
+      <span class="kt">of dog-bite victims complete a course of prophylaxis</span>
+      <span class="kf">Failure 2 · people cannot reach it</span></a>
+    <a class="key" href="#f3"><span class="kn">1.5%</span>
+      <span class="kt">of rabies spending goes to the only intervention that stops transmission</span>
+      <span class="kf">Failure 3 · we fund the consequence</span></a>
+  </div>
+
+  <section id="contents">
+    <h2>Contents</h2>
+    <p class="note">This is the companion version of a printed A0 e-poster. It carries the same
+      argument, plus the material that would not fit: the full search strategy, the section on what
+      is changing in prophylaxis, and every reference linked to its source.</p>
+    <ul>
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#intro">Background</a></li>
+      <li><a href="#methods">Methods</a> — including the full search strategy</li>
+      <li><a href="#f1">Failure 1 — we cannot count it</a></li>
+      <li><a href="#f2">Failure 2 — people cannot reach it</a></li>
+      <li><a href="#f3">Failure 3 — we fund the consequence</a></li>
+      <li><a href="#changing">What is changing</a> — not on the printed poster</li>
+      <li><a href="#ireland">Ireland and the traveller</a></li>
+      <li><a href="#limits">Limitations</a> · <a href="#further">Further research</a></li>
+      <li><a href="#conclusions">Conclusions</a></li>
+      <li><a href="#refs">References</a> · <a href="#ack">Acknowledgements</a></li>
+      <li><a href="study-guide.html"><b>Rabies: a revision guide</b></a> &mdash; short notes and self-test questions for exams</li>
+      <li><a href="resources.html"><b>Further reading</b></a> &mdash; WHO, Zero by 30, Irish guidance and the ten sources behind this poster</li>
+    </ul>
+  </section>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <h4>Background</h4>
+    <p>Rabies is a viral zoonosis that is almost universally fatal once symptoms appear, yet is
+      entirely preventable by vaccination. An estimated 59,000 people die each year, over 95% of
+      them in Africa and Asia. The WHO, WOAH, FAO
+      and partners aim to end human deaths from dog-mediated rabies by 2030.</p>
+    <h4>Aims</h4>
+    <p>To examine why a preventable disease continues to kill, and whether the “Zero by 30” target
+      remains attainable.</p>
+    <h4>Methods</h4>
+    <p>Structured searches of PubMed/MEDLINE, Scopus and Embase, supplemented by guidance from WHO,
+      WOAH, Gavi and national agencies.</p>
+    <h4>Findings</h4>
+    <p>Three failures sustain the burden. Surveillance detects a fraction of deaths, so the burden
+      cannot be measured. Prophylaxis exists but is not reached; in India only 40.5% of dog-bite
+      victims complete treatment. And just 1.5% of the disease's
+      US$8.6 billion annual cost is spent on dog vaccination, the only intervention that halts
+      transmission.</p>
+    <h4>Conclusion</h4>
+    <p>Rabies persists as a failure of delivery, not of technology.</p>
+  </section>
+
+  <section id="intro">
+    <h2>Background</h2>
+    <p>Rabies is an acute progressive encephalomyelitis caused by lyssaviruses. Once clinical signs
+      develop it is almost invariably fatal, with death following within
+      days.<sup><a href="#r1">1</a></sup> <strong>Dogs account for up to 99% of human
+      cases.</strong><sup><a href="#r2">2</a></sup> In endemic countries, <strong>children are four
+      times as likely as adults to develop rabies</strong> — they are more likely to be exposed and
+      less likely to report it.<sup><a href="#r3">3</a></sup></p>
+    <p>The disease's one exploitable weakness is its incubation period: <strong>two to three months
+      in most cases</strong>, exceeding a year in 2-3%.<sup><a href="#r1">1</a></sup> This window
+      makes post-exposure prophylaxis possible, and current prophylaxis already prevents an
+      estimated <strong>56,000 deaths each year</strong>.<sup><a href="#r4">4</a></sup></p>
+    <p>Rabies is not a disease awaiting a scientific breakthrough. The vaccines, the
+      immunoglobulins and the veterinary tools all exist. This poster examines why, despite that, an
+      estimated 59,000 people continue to die annually and what needs to change to reach
+      zero human deaths from dog-mediated rabies by 2030.<sup><a href="#r2">2</a></sup></p>
+  </section>
+
+  <section id="methods">
+    <h2>Methods</h2>
+    <p>A structured literature search was conducted in <strong>PubMed/MEDLINE, Scopus and
+      Embase</strong> on 17 September 2026, combining the terms <em>rabies</em>, <em>post-exposure prophylaxis</em>,
+      <em>elimination</em>, <em>One Health</em>, <em>burden</em> and <em>access</em> using Boolean
+      operators and database-specific indexing (MeSH, Emtree).</p>
+    <p>Searches were restricted to English-language publications from 2015 onwards (2018 onwards
+      for prophylaxis-access questions, to reflect the revised WHO regimens). Evidence was
+      supplemented by hand-searched guidance from WHO, WOAH, Gavi, CDC, NIAC and the HPSC.</p>
+
+    <details>
+      <summary>The full search strategy, verbatim</summary>
+      <div class="dbody">
+        <p class="note">Five strategies, one per research question, run across three databases on
+          17 September 2026. Reproduced so the search can be re-run and checked &mdash; the printed
+          poster has room for a summary only.</p>
+
+        <h4>S1 &mdash; Burden estimation and its uncertainty</h4>
+<pre>rabies[ti] AND (burden[ti] OR "global burden"[tiab] OR "burden of disease"[tiab]
+OR underreport*[tiab] OR "disability-adjusted"[tiab] OR DALYs[tiab]
+OR "mortality estimates"[tiab])
+AND 2015:2026[dp] AND english[la]</pre>
+        
+        <h4>S2 &mdash; Prophylaxis: access, completion and barriers</h4>
+<pre>rabies[ti] AND ("post-exposure prophylaxis"[tiab] OR postexposure[tiab] OR PEP[tiab]
+OR immunoglobulin[tiab])
+AND (access*[ti] OR barrier*[tiab] OR completion[tiab] OR adherence[tiab]
+OR "out-of-pocket"[tiab] OR stockout*[tiab] OR shortage*[tiab] OR equity[tiab])
+AND 2018:2026[dp] AND english[la]</pre>
+        
+        <h4>S3 &mdash; Dog vaccination, One Health and the economics</h4>
+<pre>rabies[ti] AND (dog*[tiab] OR canine[tiab] OR "mass vaccination"[tiab] OR "One Health"[tiab])
+AND ("cost-effectiveness"[tiab] OR "cost effectiveness"[tiab] OR "benefit-cost"[tiab]
+OR economic*[ti] OR "cost of illness"[tiab] OR "cost per"[tiab])
+AND 2015:2026[dp] AND english[la]</pre>
+
+        <h4>S4 &mdash; Elimination policy, financing and the 2030 target</h4>
+<pre>rabies[ti] AND ("zero by 30"[tiab] OR Gavi[tiab] OR "road map"[tiab] OR roadmap[tiab]
+OR financing[tiab] OR "national programme"[tiab] OR "national program"[tiab]
+OR "strategic plan"[tiab] OR "political commitment"[tiab])
+AND 2018:2026[dp] AND english[la]</pre>
+        
+        <h4>S5 &mdash; Prophylaxis biologicals and innovation</h4>
+<pre>rabies[ti] AND (monoclonal[tiab] OR "dose-sparing"[tiab] OR "single-visit"[tiab]
+OR "pre-exposure prophylaxis"[ti] OR intradermal[ti] OR regimen[ti] OR immunoglobulin[ti])
+AND 2018:2026[dp] AND english[la]</pre>
+        
+        <h4>Translation to Scopus and Embase</h4>
+<pre>Scopus
+TITLE(rabies) AND TITLE-ABS-KEY("global burden" OR "burden of disease"
+OR underreport* OR "disability-adjusted" OR DALYs OR "mortality estimates")
+AND PUBYEAR &gt; 2014 AND LANGUAGE(english)
+
+Embase
+'rabies':ti AND ('global burden':ti,ab OR 'burden of disease':ti,ab
+OR underreport*:ti,ab OR 'disability adjusted':ti,ab OR dalys:ti,ab
+OR 'mortality estimates':ti,ab)
+AND [english]/lim AND [2015-2026]/py</pre>
+        
+        <h4>Identification and screening</h4>
+        <div class="prisma" role="img"
+             aria-label="Flow of records: 615 identified across three databases; 322 duplicates removed; 293 screened on title and abstract; 173 excluded; 120 retained for full-text assessment.">
+          <div class="prow">
+            <div class="pbox"><b>615</b><span>records identified across PubMed/MEDLINE, Scopus and
+              Embase</span></div>
+            <div class="pside"><b>322</b><span>duplicate records removed</span></div>
+          </div>
+          <div class="prow">
+            <div class="pbox"><b>293</b><span>records screened on title and abstract</span></div>
+            <div class="pside"><b>173</b><span>excluded at title and abstract</span></div>
+          </div>
+          <div class="prow last">
+            <div class="pbox hi"><b>120</b><span>retained for full-text assessment</span></div>
+          </div>
+        </div>
+
+        
+        <p class="note"><strong>This is a structured search, not a systematic
+          review.</strong> There was no protocol and no dual screening. It is not described as PRISMA for
+          that reason.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============================== FAILURE 1 ============================== -->
+  <section id="f1">
+    <h2>Failure 1 — we cannot count it</h2>
+    <h3>Two estimates of the same burden do not overlap</h3>
+
+    <figure>
+      <p class="ptag">A &middot; Full scale &middot; annual human rabies deaths, worldwide</p>
+      <div class="plot">
+        <div class="crow">
+          <div class="clab"><span>Modelled estimate, 2015 <span class="note">Hampson et al.<sup><a href="#r5">5</a></sup></span></span><span class="cv">59,000</span></div>
+          <div aria-hidden="true" class="ctrack">
+            <div class="cint" style="left:15.6%;width:83.9%"></div>
+            <div class="cdot" style="left:36.9%"></div>
+          </div>
+          <div class="csub">95% CI 25,000 - 159,200</div>
+        </div>
+        <div class="crow">
+          <div class="clab"><span>Global Burden of Disease, 2021 <span class="note">incident cases<sup><a href="#r6">6</a></sup></span></span><span class="cv">10,181</span></div>
+          <div aria-hidden="true" class="ctrack">
+            <div class="cint" style="left:3.8%;width:5.1%"></div>
+            <div class="cdot" style="left:6.4%"></div>
+          </div>
+          <div class="csub">95% UI 6,080 - 14,293</div>
+        </div>
+        <div class="crow">
+          <div class="clab"><span>Reported to WHO, 2024 <span class="note">79 of 194 countries<sup><a href="#r2">2</a></sup></span></span><span class="cv">2,301</span></div>
+          <div aria-hidden="true" class="ctrack"><div class="cdot ink" style="left:1.4%"></div></div>
+          <div class="csub">counted, not modelled</div>
+        </div>
+        <div class="caxis"><span class="s0">0</span><span style="left:31.25%">50,000</span><span style="left:62.5%">100,000</span><span class="s9" style="left:93.75%">150,000</span></div>
+      </div>
+
+      <p class="ptag">B &middot; Expanded &middot; 0 - 30,000</p>
+      <div class="plot">
+        <div style="position:relative">
+          <div aria-hidden="true" class="cband" style="left:47.6%;width:35.7%"></div>
+          <div class="crow">
+            <div class="clab"><span>Modelled estimate, 2015</span><span class="cv note" style="font-weight:400">lower tail only</span></div>
+            <div aria-hidden="true" class="ctrack"><div class="carrow" style="left:83.3%;right:0"></div></div>
+            <div class="csub">continues to 159,200</div>
+          </div>
+          <div class="crow">
+            <div class="clab"><span>Global Burden of Disease, 2021</span><span class="cv">10,181</span></div>
+            <div aria-hidden="true" class="ctrack">
+              <div class="cint" style="left:20.3%;width:27.4%"></div>
+              <div class="cdot" style="left:33.9%"></div>
+            </div>
+            <div class="csub">6,080 - 14,293 &middot; ICD-10 A82, all rabies<sup><a href="#r6">6</a></sup></div>
+          </div>
+          <div class="crow">
+            <div class="clab"><span>Reported to WHO, 2024</span><span class="cv">2,301</span></div>
+            <div aria-hidden="true" class="ctrack"><div class="cdot ink" style="left:7.7%"></div></div>
+            <div class="csub">16 of 47 African Member States reported nothing</div>
+          </div>
+        </div>
+        <div class="caxis"><span class="s0">0</span><span style="left:33.3%">10,000</span><span style="left:66.6%">20,000</span><span class="s9" style="left:100%">30,000</span></div>
+      </div>
+      <p class="callout">No estimate reaches 14,293 &rarr; 25,000</p>
+
+      <figcaption><b>Figure 1.</b> Panel A: annual human rabies mortality
+        worldwide.<sup><a href="#r2">2</a>,<a href="#r5">5</a>,<a href="#r6">6</a></sup> Lines show
+        95% intervals, dots point estimates. Panel B: the same series over
+        0-30,000.<sup><a href="#r2">2</a>,<a href="#r5">5</a>,<a href="#r6">6</a></sup> The Global
+        Burden interval (6,080-14,293 incident cases)<sup><a href="#r6">6</a></sup> lies wholly
+        below the 2015 lower bound of 25,000,<sup><a href="#r5">5</a></sup> so no single value is
+        consistent with both, although its definition, rabies of any origin (ICD-10 A82), is the
+        broader. Rabies is almost invariably fatal, so incident cases approximate
+        deaths.<sup><a href="#r1">1</a></sup> 115 of 194 countries reported no deaths in
+        2024.</figcaption>
+    </figure>
+
+    <p>The discrepancy should run the other way: the Global Burden of Disease codes rabies of any
+      origin, the 59,000 figure only dog-mediated infection.<sup><a href="#r6">6</a></sup>
+      <strong>The broader definition returns the smaller number.</strong></p>
+    <p>Fewer than half of Member States submitted any rabies data for 2024, and a third of the
+      African Region submitted none.<sup><a href="#r2">2</a></sup> Rabies is almost invariably fatal
+      within days of symptom onset,<sup><a href="#r1">1</a></sup> so it leaves no survivors to press
+      its case.</p>
+
+    <h4>The same pattern, at national level</h4>
+    <div class="stats">
+      <span class="n">20,847</span>
+      <span class="ratio">3.6×</span>
+      <span class="n hi">5,726</span>
+    </div>
+    <p class="note">Modelled for India<sup><a href="#r5">5</a></sup> — 35% of the global estimate —
+      against a nationwide household survey of 337,808 people
+      (95% UI 3,967-7,350).<sup><a href="#r7">7</a></sup></p>
+
+
+    <div class="ix">
+      <h4>If India's survey is right, what is the global total?</h4>
+      <p class="why">The 2015 model attributes <strong>35%</strong> of the world's rabies deaths to
+        India.<sup><a href="#r5">5</a></sup> India's own 2022-23 household survey measured far fewer
+        than the model assumes.<sup><a href="#r7">7</a></sup> Hold India's share at 35% and drag the
+        measured figure to see what global total it implies.</p>
+
+      <div class="ixctl">
+        <label for="ix1">India — annual rabies deaths</label>
+        <div class="ixval" id="ixIndia">5,726</div>
+        <div class="ixunit" id="ixIndiaNote">the survey's central estimate</div>
+        <input type="range" id="ix1" min="3967" max="20847" step="1" value="5726"
+               aria-describedby="ixIndiaNote">
+        <div class="ixtick" aria-hidden="true"><i style="left:10.4%"></i><span style="left:10.4%">survey found 5,726</span></div>
+        <div class="ixends"><span>3,967 — survey lower bound</span><span>20,847 — modelled</span></div>
+      </div>
+
+      <div class="ixout">
+        <div class="ixbars">
+          <div class="crow ixnow">
+            <div class="clab"><span><strong>Implied global total</strong></span><span class="cv hi" id="ixGlobal">16,221</span></div>
+            <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" id="ixBar" style="left:0;width:27.5%"></div></div>
+          </div>
+          <div class="crow ixbase">
+            <div class="clab"><span>Survey baseline <span class="note">5,726 in India</span></span><span class="cv">16,221</span></div>
+            <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:27.5%"></div></div>
+          </div>
+          <div class="crow">
+            <div class="clab"><span>Modelled estimate, 2015</span><span class="cv">59,000</span></div>
+            <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:100%"></div></div>
+          </div>
+          <div class="crow">
+            <div class="clab"><span>Global Burden of Disease, 2021</span><span class="cv">10,181</span></div>
+            <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:17.3%"></div></div>
+          </div>
+        </div>
+        <p class="ixverdict" id="ixVerdict"></p>
+      </div>
+
+      <p class="note" style="margin:14px 0 0"><strong>What this assumes.</strong> That India's share
+        of the global burden really is 35% — a figure taken from the same model the comparison is
+        questioning. It is an illustration of an internal inconsistency, not an independent estimate.
+        Only the two endpoints, 5,726 and 20,847, are published values.</p>
+    </div>
+
+    <div class="quote">
+      <p>Estimates “vary widely across modelling studies”, reflecting “the limitations in the
+        surveillance data on which these models rely”.</p>
+      <cite>World Health Organization, 2026<sup><a href="#r2">2</a></sup></cite>
+    </div>
+
+    <p class="punch">Without a credible baseline, progress towards zero cannot be measured — and
+      elimination cannot be demonstrated.</p>
+  </section>
+
+  <!-- ============================== FAILURE 2 ============================== -->
+  <section id="f2">
+    <h2>Failure 2 — people cannot reach it</h2>
+    <h3>Four in five start. Two in five finish.</h3>
+
+
+    <div class="cohort">
+      <h4 style="margin:0 0 4px;font-size:19px">1,576 people, one dot each</h4>
+      <p class="why">Every dot is one person in the Indian survey who reported a dog
+        bite.<sup><a href="#r7">7</a></sup> Watch where they are lost &mdash; each band is sized to
+        the number of people in it.</p>
+      <div class="cgrid" id="cgrid" role="img"
+           aria-label="1,576 dots representing dog-bite victims. 638 complete a course of prophylaxis, 615 begin one and stop, and 323 never start."></div>
+      <p class="ccap" id="ccap">1,576 people bitten by a dog.</p>
+      <div class="clegend" id="clegend">
+        <span><i style="background:var(--series)"></i> 638 completed the course</span>
+        <span><i style="background:var(--accent)"></i> 615 started and stopped</span>
+        <span><i style="background:var(--grid)"></i> 323 never started</span>
+      </div>
+      <button class="cplay" id="cplay" type="button">Replay</button>
+    </div>
+
+    <figure>
+      <p class="ptag">A · The prophylaxis cascade · India, 2022-23 · n = 1,576</p>
+      <div class="plot">
+        <div class="crow"><div class="clab"><span>Bitten by a dog</span><span class="cv">100% · 1,576</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:100%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Sought care at a facility</span><span class="cv">83.6% · 1,317</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:83.6%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Received ≥1 vaccine dose</span><span class="cv">79.5% · 1,253</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:79.5%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Received ≥3 doses</span><span class="cv">66.2% · 1,043</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:66.2%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Completed the course</span><span class="cv">40.5% · 638</span></div>
+          <div aria-hidden="true" class="ctrack slim">
+            <div class="cbar slim" style="left:0;width:40.5%"></div>
+            <div class="cbar slim hi" style="left:40.5%;width:39%"></div>
+          </div>
+          <div class="csub"><strong>615 did not finish</strong> — 49.1% of the 1,253 who started</div></div>
+      </div>
+
+      <p class="ptag">B · Why · barriers reported by 20 countries, WHO African Region</p>
+      <div class="plot">
+        <div class="crow"><div class="clab"><span>Public unaware of rabies and PEP</span><span class="cv">16</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:80%"></div></div></div>
+        <div class="crow"><div class="clab"><span>No PEP facility within reach</span><span class="cv">14</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:70%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Use of traditional medicine</span><span class="cv">13</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:65%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Health workers unsure of referral</span><span class="cv">12</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:60%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Immunoglobulin stockout</span><span class="cv">11</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:55%"></div></div></div>
+        <div class="crow"><div class="clab"><span style="color:#8F1259;font-weight:700">High cost of prophylaxis</span><span class="cv hi">10</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim hi" style="left:0;width:50%"></div></div>
+          <div class="csub" style="color:#8F1259">cost ranks sixth of eight</div></div>
+        <div class="crow"><div class="clab"><span>Children afraid to tell parents</span><span class="cv">9</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:45%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Vaccine stockout</span><span class="cv">9</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:45%"></div></div></div>
+        <div class="caxis"><span class="s0">0</span><span style="left:50%">10</span><span class="s9" style="left:100%">20 countries</span></div>
+      </div>
+
+      <figcaption><b>Figure 2.</b> <b>Panel A:</b> post-exposure prophylaxis cascade among 1,576
+        people reporting a dog bite in a nationwide Indian household survey of 337,808 people,
+        2022-23; percentages are of all 1,576. The berry segment is the 615 who received a first
+        dose but never completed the course — 49.1% of the 1,253 who started. Outside this pathway,
+        849 (53.9%) washed the wound with soap and water, and 61 (11.2%) of the 546 with laceration,
+        puncture or avulsion wounds received immunoglobulin.<sup><a href="#r7">7</a></sup>
+        <b>Panel B:</b> barriers reported by 20 countries of the WHO African Region, 2023
+        and 2025; the question was multiple-choice, so counts are not exclusive.<sup><a href="#r2">2</a></sup> The panels
+        describe different populations — the same failure, from both ends.</figcaption>
+    </figure>
+
+
+    <div class="ix">
+      <h4>Run the cascade on any number of bites</h4>
+      <p class="why">Apply the Indian survey's observed rates<sup><a href="#r7">7</a></sup> to any
+        number of people bitten, and see how many reach the end of a course.</p>
+      <div class="calc-in">
+        <input type="number" id="cIn" min="1" max="999999999" step="1" value="1000000"
+               aria-label="Number of people bitten">
+        <span class="note">people bitten</span>
+      </div>
+      <div class="presets">
+        <button type="button" data-n="100">100</button>
+        <button type="button" data-n="10000">10,000</button>
+        <button type="button" data-n="1000000">1 million</button>
+        <button type="button" data-n="7700000">7.7 million — India, dog bites in one year</button>
+      </div>
+      <div id="cOut">
+        <div class="calcrow"><span>Sought care at a facility <span class="note">83.6%</span></span><span class="cn" id="c1"></span></div>
+        <div class="calcrow"><span>Received ≥1 vaccine dose <span class="note">79.5%</span></span><span class="cn" id="c2"></span></div>
+        <div class="calcrow"><span>Received ≥3 doses <span class="note">66.2%</span></span><span class="cn" id="c3"></span></div>
+        <div class="calcrow"><span>Completed the course <span class="note">40.5%</span></span><span class="cn" id="c4"></span></div>
+        <div class="calcrow lost"><span><strong>Started but never finished</strong> <span class="note" style="color:inherit">49.1% of those who started</span></span><span class="cn" id="c5"></span></div>
+      </div>
+      <p class="ixverdict" id="cV"></p>
+      <p class="note" style="margin:14px 0 0"><strong>What this assumes.</strong> That the rates
+        measured in one nationwide Indian survey, 2022-23, hold for whatever population you enter.
+        They will not hold everywhere — the point is the shape of the loss, not a forecast.
+        <strong>On the 7.7 million preset:</strong> the survey reports 9.1 million <em>animal</em>
+        bites a year in India, at 6.6 per 1,000 population, and a separate <em>dog</em>-bite
+        incidence of 5.6 per 1,000.<sup><a href="#r7">7</a></sup> Because every rate in this
+        cascade was measured among dog-bite victims specifically, the preset scales 9.1 million by
+        5.6/6.6 to give roughly 7.7 million dog bites. On the paper's dog-bite confidence interval of
+        4.8-6.6 per 1,000 that range is about 6.6-9.1 million.</p>
+    </div>
+
+    <h4>The price of a course</h4>
+    <div class="stats">
+      <span class="n">US$18</span>
+      <span class="ratio">20×</span>
+      <span class="n hi">US$365</span>
+    </div>
+    <p class="note">Public-facility cost of a full course, Côte d'Ivoire to Ghana. It is free in
+      only 10 of 20 countries<sup><a href="#r2">2</a></sup>; where charged, a course costs 31 days'
+      wages in Asia and 51 in Africa.<sup><a href="#r1">1</a></sup></p>
+
+    <h4>The biologics do not arrive</h4>
+    <ul class="statlist">
+      <li><b>11.2%</b><span>of Indian bite victims with laceration, puncture or avulsion wounds
+        received immunoglobulin<sup><a href="#r7">7</a></sup></span></li>
+      <li><b>5 of 20</b><span>African countries where any immunoglobulin product is licensed or in
+        use<sup><a href="#r2">2</a></sup></span></li>
+      <li><b>14 of 18</b><span>reported vaccine or immunoglobulin shortages within two
+        years<sup><a href="#r2">2</a></sup></span></li>
+      <li><b>4 of 17</b><span>use the dose-sparing one-week intradermal
+        regimen<sup><a href="#r2">2</a></sup></span></li>
+    </ul>
+
+    <p class="punch">Not one of these is a failure of the vaccine. Every one is a failure of the
+      system meant to deliver it.<sup><a href="#r8">8</a></sup></p>
+  </section>
+
+  <!-- ============================== FAILURE 3 ============================== -->
+  <section id="f3">
+    <h2>Failure 3 — we fund the consequence, not the cause</h2>
+    <h3>Only one intervention stops transmission. It gets 1.5% of the money.</h3>
+
+    <figure>
+      <p class="ptag">A · Where the US$8.6 billion goes each year</p>
+      <div class="plot">
+        <p class="csub" style="font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:12px;margin-bottom:10px">Spent after transmission has occurred — 98.4%</p>
+        <div class="crow"><div class="clab"><span>Premature death</span><span class="cv">55.2%</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:92%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Direct cost of prophylaxis</span><span class="cv">20.1%</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:33.5%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Income lost seeking prophylaxis</span><span class="cv">15.5%</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:25.8%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Livestock losses</span><span class="cv">6.0%</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:10%"></div></div></div>
+        <div class="crow"><div class="clab"><span>Travel to seek prophylaxis</span><span class="cv">1.6%</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:2.7%"></div></div></div>
+        <p class="csub" style="font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:12px;margin:18px 0 10px">Spent preventing or measuring transmission — 1.6%</p>
+        <div class="crow"><div class="clab"><span style="color:#8F1259;font-weight:700">Dog vaccination</span><span class="cv hi">1.5%</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim hi" style="left:0;width:2.5%"></div></div>
+          <div class="csub" style="color:#8F1259">the only intervention that stops transmission</div></div>
+        <div class="crow"><div class="clab"><span>Dog population management</span><span class="cv">0.08%</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:0.5%"></div></div>
+          <div class="csub">too small to appear at this scale</div></div>
+        <div class="crow"><div class="clab"><span>Laboratory surveillance</span><span class="cv">0.009%</span></div>
+          <div aria-hidden="true" class="ctrack slim"><div class="cbar slim" style="left:0;width:0.4%"></div></div>
+          <div class="csub">fewer than one part in ten thousand</div></div>
+      </div>
+
+      <p class="ptag">B · The one region that spends differently</p>
+      <div class="plot">
+        <div class="crow"><div class="clab"><span>Most endemic regions</span><span class="cv">under 1.5%</span></div>
+          <div aria-hidden="true" class="ctrack"><div class="cbar" style="left:0;width:2.5%"></div></div></div>
+        <div class="crow"><div class="clab"><span style="color:#8F1259;font-weight:700">Latin America</span><span class="cv hi">17%</span></div>
+          <div aria-hidden="true" class="ctrack"><div class="cbar hi" style="left:0;width:28.3%"></div></div>
+          <div class="csub" style="color:#8F1259">eleven times the share</div></div>
+      </div>
+      <p class="note" style="margin-top:12px">Dog-mediated rabies has since been eliminated from
+        several Latin American countries, and bat rabies now accounts for the majority of human
+        rabies cases in the Americas.<sup><a href="#r1">1</a></sup></p>
+
+      <figcaption><b>Figure 3.</b> Disaggregation of the estimated US$8.6 billion (95% CI 2.9-21.5
+        billion) annual global cost of dog-mediated rabies. Shares are computed from Table 3 of
+        Hampson et al., which totals US$8,477 million; the five components named in that paper's
+        abstract reproduce exactly (55%, 20%, 15.5%, 6%, 1.5%), and travel costs and dog population
+        management, which the abstract does not list, are added here.<sup><a href="#r5">5</a></sup>
+        <b>Panel B</b> is WHO's own comparison: dog vaccination takes under 1.5% of rabies costs in
+        most endemic areas but 17% in Latin America — each a share of costs within its own
+        region.<sup><a href="#r1">1</a></sup></figcaption>
+    </figure>
+
+    <h4>Spending more would cost less</h4>
+    <div class="stats">
+      <span class="n">494,700</span>
+      <span class="ratio">-US$66 each</span>
+      <span class="n hi">-US$32.5m</span>
+    </div>
+    <p class="note">Additional deaths averted across 67 countries by 2035 by expanding free
+      prophylaxis with the one-week intradermal regimen, incremental to the status quo — while total
+      expenditure falls, at an incremental cost-effectiveness ratio of -US$66 per death
+      averted.<sup><a href="#r4">4</a></sup></p>
+
+    <h4>What coordination would buy</h4>
+    <ul class="statlist">
+      <li><b>US$4.47</b><span>average cost per dog vaccinated across a coordinated African
+        programme<sup><a href="#r9">9</a></sup></span></li>
+      <li><b>US$9.5bn</b><span>projected welfare gain 2024-2054 (95% CI 8.1-11.4), if every
+        country cooperates<sup><a href="#r9">9</a></sup></span></li>
+      <li><b>17.4m</b><span>more people vaccinated on the same ~73 million vials, because
+        intradermal dosing splits a vial<sup><a href="#r4">4</a></sup></span></li>
+    </ul>
+
+    <p class="punch">The obstacle is not the price of the intervention. It is that nobody has
+      budgeted for it.</p>
+  </section>
+
+  <!-- ============================== WHAT IS CHANGING ============================== -->
+  <section id="changing">
+    <h2>What is changing</h2>
+    <h3>The tools are improving faster than the systems delivering them</h3>
+
+    <p><strong>Monoclonal antibodies</strong> are displacing plasma-derived immunoglobulin, which is
+      in chronically short supply &mdash; though of the 20 African Region countries surveyed, only
+      <strong>Nigeria and Togo</strong> reported using a monoclonal product.<sup><a href="#r2">2</a></sup>
+      A phase 4 trial randomised <strong>3,994 patients</strong> with category III exposures
+      and found a monoclonal antibody regimen immunogenically comparable to equine immunoglobulin
+      (day-14 geometric mean concentration 16.05 vs 13.48 IU/mL), with no participant developing
+      rabies during one year of follow-up.<sup><a href="#r10">10</a></sup> Sixty participants had to
+      be withdrawn from the equine immunoglobulin arm after a positive skin test, and three
+      developed urticaria causally related to equine immunoglobulin despite a negative
+      test.<sup><a href="#r10">10</a></sup> Monoclonals are manufactured recombinantly, so supply is
+      scalable in a way that donor plasma is not.</p>
+
+    <p><strong>Integrated bite case management</strong> links animal investigation to human
+      treatment decisions, targeting prophylaxis at genuine exposures. Modelling suggests it reduces
+      vaccine requirements below 21.3 million vials while <em>improving</em> cost-effectiveness as
+      elimination approaches.<sup><a href="#r4">4</a></sup></p>
+
+    <p><strong>Financing has become less certain, not more.</strong> Gavi announced expanded access
+      to human rabies vaccines for prophylaxis in June 2024; by 2026 rabies had been moved into
+      Gavi's <strong>discretionary fund</strong>, flexible funding that countries allocate across
+      eligible programmes. Only four countries in the WHO African Region applied before the
+      change.<sup><a href="#r2">2</a></sup></p>
+  </section>
+
+  <section id="ireland">
+    <h2>Ireland and the traveller</h2>
+    <h3>A rabies-free country is not a risk-free country</h3>
+    <p>Ireland has been free of terrestrial rabies since <strong>1902</strong>, but is classified as
+      <em>low risk</em>, not <em>no risk</em>. European bat lyssaviruses circulate across Europe, and
+      all Irish bats are considered potential rabies hosts.<sup><a href="#r3">3</a></sup></p>
+    <p>Approximately <strong>150-200 potential rabies exposures are assessed in Ireland
+      annually</strong>. More than 95% follow exposure to a terrestrial animal abroad, mainly dogs.
+      Around 80% of those presenting have already started PEP overseas and attend for series
+      completion.<sup><a href="#r3">3</a></sup></p>
+    <p>Global elimination is not a distant concern. <strong>Irish clinical practice is
+      downstream of prophylaxis systems in endemic countries.</strong></p>
+  </section>
+
+  <section id="limits">
+    <h2>Limitations</h2>
+    <ul>
+      <li>Global burden estimates are <strong>largely modelled</strong>, relying on assumptions
+        about bite incidence and health-seeking behaviour that vary substantially between
+        settings.</li>
+      <li><strong>Cost-effectiveness comparisons are not directly comparable.</strong> Human PEP is
+        typically evaluated over a 1-year period, while dog vaccination programmes are assessed over
+        4-10 years.</li>
+      <li><strong>English-language restriction</strong> may have excluded relevant regional
+        evidence, particularly from West Africa and Latin America.</li>
+      <li>WHO's African Region survey drew on <strong>20 of 47 Member States</strong>, self-reported
+        by ministries of health, and may not be representative.</li>
+    </ul>
+  </section>
+
+  <section id="further">
+    <h2>Recommendations for further research</h2>
+    <ul>
+      <li><strong>Reconciliation of burden estimates.</strong> The six-fold modelled-Global
+        Burden discrepancy and the national-level inconsistencies in India remain unresolved.
+        Progress towards zero cannot be measured without a credible baseline.</li>
+      <li><strong>Evaluate monoclonal antibodies at scale:</strong> immunogenicity comparable to
+        equine immunoglobulin,<sup><a href="#r10">10</a></sup> but field effectiveness and cost
+        where immunoglobulin is unavailable remain untested.</li>
+      <li><strong>Prospective evaluation of single-visit and routine childhood pre-exposure
+        prophylaxis</strong> in endemic populations. Current evidence is largely from travellers or
+        from modelling.</li>
+      <li><strong>Broaden economic evaluations to incorporate livestock losses and animal
+        welfare</strong>, often omitted, which may lead to the benefits of dog vaccination being
+        underestimated.</li>
+    </ul>
+  </section>
+
+  <section id="conclusions">
+    <h2>Conclusions</h2>
+    <ul>
+      <li>Rabies remains <strong>almost universally fatal yet almost entirely preventable</strong>.
+        The tools required to eliminate it — vaccines, immunoglobulins, monoclonal antibodies and
+        veterinary programmes — already exist.</li>
+      <li>The disease persists because of <strong>three linked delivery failures</strong>:
+        surveillance that cannot reliably measure the burden, prophylaxis that patients cannot
+        access or complete, and financing focused on consequences of transmission rather than its
+        source.</li>
+      <li>Improving access to PEP is <strong>cost-saving</strong>, and coordinated dog vaccination
+        can generate substantial net economic benefit.</li>
+      <li>WHO judges the 2030 target <strong>still achievable in some countries</strong>.</li>
+      <li>Rabies is therefore best understood not as a neglected tropical disease awaiting
+        innovation, but as <strong>a test of whether existing tools can be delivered to the people
+        who need them</strong>.</li>
+    </ul>
+  </section>
+
+  <section id="refs">
+    <h2>References</h2>
+    <ol class="refs">
+      <li id="r1"><div>World Health Organization. WHO expert consultation on rabies: third report. Geneva: World Health Organization, 2018. (WHO Technical Report Series, No. 1012).<br><a href="https://iris.who.int/handle/10665/272364">iris.who.int/handle/10665/272364</a></div></li>
+      <li id="r2"><div>World Health Organization. Rabies prevention and control in the WHO African Region. Wkly Epidemiol Rec 2026; 101(19):78-86.<br><a href="https://www.who.int/westernpacific/publications/i/item/who-wer10119-78-86">who.int &mdash; WER 101(19)</a></div></li>
+      <li id="r3"><div>Health Protection Surveillance Centre. Rabies post-exposure treatment guidelines, version 1.2. Dublin: Health Service Executive, 2026.<br><a href="https://www.hpsc.ie/a-z/zoonotic/rabies">hpsc.ie/a-z/zoonotic/rabies</a></div></li>
+      <li id="r4"><div>WHO Rabies Modelling Consortium. The potential effect of improved provision of rabies post-exposure prophylaxis in Gavi-eligible countries: a modelling study. Lancet Infect Dis 2019; 19:102-111.<br><a href="https://doi.org/10.1016/S1473-3099(18)30512-7">doi.org/10.1016/S1473-3099(18)30512-7</a></div></li>
+      <li id="r5"><div>Hampson K, Coudeville L, Lembo T, et al. Estimating the global burden of endemic canine rabies. PLoS Negl Trop Dis 2015; 9:e0003709.<br><a href="https://doi.org/10.1371/journal.pntd.0003709">doi.org/10.1371/journal.pntd.0003709</a></div></li>
+      <li id="r6"><div>Zuo QY, Lv WW, Qin Y, et al. Global burden and cross-country inequalities in rabies from 1990 to 2021: a systemic analysis of the global burden of disease study 2021. BMC Infect Dis 2026; 26:213.<br><a href="https://doi.org/10.1186/s12879-025-12475-0">doi.org/10.1186/s12879-025-12475-0</a></div></li>
+      <li id="r7"><div>Thangaraj JWV, Krishna NS, Devika S, et al. Estimates of the burden of human rabies deaths and animal bites in India, 2022-23: a community-based cross-sectional survey and probability decision-tree modelling study. Lancet Infect Dis 2025; 25:126-134.<br><a href="https://doi.org/10.1016/S1473-3099(24)00490-0">doi.org/10.1016/S1473-3099(24)00490-0</a></div></li>
+      <li id="r8"><div>Lodha L, Gupta S, Ashwini MA, et al. Rabies despite postexposure prophylaxis in high-burden settings: vaccine failure or gaps in healthcare delivery? Clin Infect Dis 2026; 83:139-146.<br><a href="https://doi.org/10.1093/cid/ciaf662">doi.org/10.1093/cid/ciaf662</a></div></li>
+      <li id="r9"><div>Bucher A, Dimov A, Fink G, et al. Benefit-cost analysis of coordinated strategies for control of rabies in Africa. Nat Commun 2023; 14:5370.<br><a href="https://doi.org/10.1038/s41467-023-41110-2">doi.org/10.1038/s41467-023-41110-2</a></div></li>
+      <li id="r10"><div>Kulkarni PS, Potey AV, Kapse D, et al. Post-exposure prophylaxis regimen of rabies monoclonal antibody and vaccine in category 3 potential exposure patients: a phase 4, open-label, randomised, active-controlled trial. Lancet 2025; 406:627-635.<br><a href="https://doi.org/10.1016/S0140-6736(25)00735-4">doi.org/10.1016/S0140-6736(25)00735-4</a></div></li>
+    </ol>
+  </section>
+
+  <section id="ack">
+    <h2>Acknowledgements</h2>
+    <p>Generative AI (Claude, Anthropic) was used in three ways: to help develop the conceptual structure of the poster; to cross-check quantitative claims against their source publications; and to build the companion website. The authors are responsible for the final content.
+</p>
+  </section>
+
+  <section id="cite">
+    <h2>How to cite this page</h2>
+    <p class="cite">Feeney A, Faraz O, Gbinigie D, Ghanem Y, Lernihan N, Leyden A, Marren A,
+      Mehra S, Reddington A, Tripathi R. 100% Preventable, 100% Fatal: Barriers to rabies elimination on the road
+      to “Zero by 30” [e-poster companion]. Galway: School of Medicine, University of Galway; 2026.
+      Available from: [URL]</p>
+  </section>
+
+  <footer>
+    <p>Companion web version of an e-poster presented for MD304 Global Health and Development,
+      School of Medicine, University of Galway, 2026-2027.</p>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  var sl=document.getElementById('ix1'); if(!sl) return;
+  var fmt=function(n){return n.toLocaleString('en-GB');};
+  var elI=document.getElementById('ixIndia'), elN=document.getElementById('ixIndiaNote'),
+      elG=document.getElementById('ixGlobal'), elB=document.getElementById('ixBar'),
+      elV=document.getElementById('ixVerdict');
+  function update(){
+    var india=+sl.value, global=Math.round(india/0.353);
+    elI.textContent=fmt(india);
+    elG.textContent=fmt(global);
+    elB.style.width=Math.min(100,(global/59000)*100).toFixed(1)+'%';
+    elN.textContent = india===5726 ? "the survey's central estimate"
+      : india===20847 ? 'what the 2015 model assumes'
+      : india<=7350 && india>=3967 ? 'within the survey\u2019s 95% uncertainty interval'
+      : 'between the measured and modelled figures';
+    var v;
+    if(global < 14293){
+      v='At this figure the implied global total falls <b>below the Global Burden of Disease upper bound</b> of 14,293 \u2014 and to less than a quarter of 59,000.';
+    } else if(global < 25000){
+      v='The implied total lands <b>in the gap that neither estimate reaches</b> \u2014 between 14,293 and 25,000.';
+    } else if(global < 50000){
+      v='The implied total is <b>within the 2015 confidence interval</b>, but far below its central estimate of 59,000.';
+    } else {
+      v='Only when India is assumed to lose close to <b>20,000 lives a year</b> does the global figure approach 59,000.';
+    }
+    elV.innerHTML=v;
+  }
+  sl.addEventListener('input',update); update();
+})();
+</script>
+
+<div class="rs-back" id="rsBack" hidden></div>
+<aside class="rs" id="rs" role="dialog" aria-modal="true" aria-labelledby="rsTitle" hidden>
+  <div class="rs-hd"><b id="rsTitle">Reference</b>
+    <button class="rs-x" id="rsX" type="button">Close</button></div>
+  <div class="rs-body" id="rsBody"></div>
+</aside>
+
+<script>
+(function(){ /* ---- reference sheet ---- */
+  var sheet=document.getElementById('rs'), back=document.getElementById('rsBack'),
+      body=document.getElementById('rsBody'), title=document.getElementById('rsTitle'),
+      x=document.getElementById('rsX'), last=null;
+  if(!sheet) return;
+  function open(id, from){
+    var li=document.getElementById(id); if(!li) return;
+    title.textContent='Reference '+id.replace('r','');
+    body.innerHTML=li.innerHTML;
+    last=from; sheet.hidden=false; back.hidden=false;
+    requestAnimationFrame(function(){ sheet.classList.add('on'); back.classList.add('on'); });
+    x.focus();
+  }
+  function close(){
+    sheet.classList.remove('on'); back.classList.remove('on');
+    setTimeout(function(){ sheet.hidden=true; back.hidden=true; },200);
+    if(last) last.focus();
+  }
+  document.addEventListener('click', function(e){
+    var a=e.target.closest ? e.target.closest('sup a[href^="#r"]') : null;
+    if(a){ e.preventDefault(); open(a.getAttribute('href').slice(1), a); }
+  });
+  x.addEventListener('click', close);
+  back.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !sheet.hidden) close(); });
+})();
+
+(function(){ /* ---- cascade calculator ---- */
+  var inp=document.getElementById('cIn'); if(!inp) return;
+  var f=function(n){return Math.round(n).toLocaleString('en-GB');};
+  var ids=['c1','c2','c3','c4'], rate=[0.836,0.795,0.662,0.405];
+  function run(){
+    var n=Math.max(0, Math.min(999999999, +inp.value||0));
+    for(var i=0;i<4;i++) document.getElementById(ids[i]).textContent=f(n*rate[i]);
+    var lost=n*rate[1]*0.491;
+    document.getElementById('c5').textContent=f(lost);
+    document.getElementById('cV').innerHTML = n>0
+      ? 'Of <b>'+f(n)+'</b> people bitten, <b>'+f(n*rate[3])+'</b> finish a course of prophylaxis. <b>'+f(lost)+'</b> begin one and stop.'
+      : 'Enter a number of people bitten.';
+  }
+  inp.addEventListener('input', run);
+  Array.prototype.forEach.call(document.querySelectorAll('.presets button'), function(b){
+    b.addEventListener('click', function(){ inp.value=b.dataset.n; run(); });
+  });
+  run();
+})();
+</script>
+
+<script>
+/* ---- theme: OS default, with an override remembered per device ---- */
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn'), saved=null;
+  try{ saved=localStorage.getItem('rabies-theme'); }catch(e){}
+  if(saved) root.setAttribute('data-theme',saved);
+  function dark(){ return root.getAttribute('data-theme')==='dark' ||
+    (!root.hasAttribute('data-theme') && matchMedia('(prefers-color-scheme:dark)').matches); }
+  function label(){ if(btn) btn.textContent = dark() ? 'Light mode' : 'Dark mode'; }
+  if(btn) btn.addEventListener('click', function(){
+    var next = dark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try{ localStorage.setItem('rabies-theme', next); }catch(e){}
+    label();
+  });
+  label();
+})();
+
+/* ---- reading progress ---- */
+(function(){
+  var bar=document.getElementById('prog'); if(!bar) return;
+  var tick=false;
+  function upd(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    bar.style.width = (h>0 ? Math.min(100, (scrollY/h)*100) : 0) + '%';
+    tick=false;
+  }
+  addEventListener('scroll', function(){ if(!tick){ tick=true; requestAnimationFrame(upd); } }, {passive:true});
+  addEventListener('resize', upd); upd();
+})();
+
+/* ---- contents drawer, with current-section highlight ---- */
+(function(){
+  var btn=document.getElementById('navBtn'), nav=document.getElementById('nav'),
+      back=document.getElementById('rsBack');
+  if(!btn||!nav) return;
+  var links=[].slice.call(nav.querySelectorAll('a'));
+  function open(){
+    nav.hidden=false; if(back) back.hidden=false;
+    requestAnimationFrame(function(){ nav.classList.add('on'); if(back) back.classList.add('on'); });
+    btn.setAttribute('aria-expanded','true'); mark();
+  }
+  function close(){
+    nav.classList.remove('on'); if(back) back.classList.remove('on');
+    setTimeout(function(){ nav.hidden=true; if(back) back.hidden=true; },200);
+    btn.setAttribute('aria-expanded','false');
+  }
+  function mark(){
+    var best=null, bestTop=-1e9;
+    links.forEach(function(a){
+      a.classList.remove('here');
+      var el=document.querySelector(a.getAttribute('href'));
+      if(!el) return;
+      var t=el.getBoundingClientRect().top-70;
+      if(t<=0 && t>bestTop){ bestTop=t; best=a; }
+    });
+    (best || links[0]).classList.add('here');
+  }
+  btn.addEventListener('click', function(){ nav.hidden ? open() : close(); });
+  links.forEach(function(a){ a.addEventListener('click', close); });
+  if(back) back.addEventListener('click', function(){ if(!nav.hidden) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !nav.hidden) close(); });
+})();
+
+/* ---- slider: announce a formatted value to screen readers ---- */
+(function(){
+  var sl=document.getElementById('ix1'); if(!sl) return;
+  function say(){ sl.setAttribute('aria-valuetext', (+sl.value).toLocaleString('en-GB')+' deaths a year in India'); }
+  sl.addEventListener('input', say); say();
+})();
+</script>
+
+<script>
+/* ---- the cohort: motion is the variable, not decoration ---- */
+(function(){
+  var grid=document.getElementById('cgrid'); if(!grid) return;
+  var cap=document.getElementById('ccap'), leg=document.getElementById('clegend'),
+      btn=document.getElementById('cplay');
+  var N=1576;
+  /* 1,576 = 259 never sought care + 64 sought care but no vaccine
+             + 210 stopped before 3 doses + 405 reached 3 but never finished + 638 completed */
+  var stages=[
+    {n:259, cls:'gone',    text:'<b>259</b> never sought care at a facility.'},
+    {n:64,  cls:'gone',    text:'<b>64</b> more sought care but received no vaccine.'},
+    {n:210, cls:'stopped', text:'<b>210</b> more started a course but stopped before three doses.'},
+    {n:405, cls:'stopped', text:'<b>405</b> more reached three doses but never completed.'}
+  ];
+  /* document order, deliberately not shuffled: each stage takes the next contiguous
+     block of dots, so losses accumulate from the top of the grid downwards and the
+     size of each loss is readable as an area rather than as scattered colour changes */
+  var order=[]; for(var i=0;i<N;i++) order.push(i);
+
+  var dots=[], frag=document.createDocumentFragment();
+  for(var i=0;i<N;i++){ var d=document.createElement('i'); dots.push(d); frag.appendChild(d); }
+  grid.appendChild(frag);
+
+  var assign=[], k=0;
+  stages.forEach(function(st,si){
+    for(var i=0;i<st.n;i++){ assign.push({el:dots[order[k++]], cls:st.cls, stage:si}); }
+  });
+
+  var reduce = matchMedia('(prefers-reduced-motion:reduce)').matches, timers=[];
+  function reset(){
+    timers.forEach(clearTimeout); timers=[];
+    dots.forEach(function(d){ d.className=''; d.style.transitionDelay='0ms'; });
+    leg.classList.remove('on');
+    cap.innerHTML='1,576 people bitten by a dog.';
+  }
+  function finish(){
+    assign.forEach(function(a){ a.el.className=a.cls; });
+    leg.classList.add('on');
+    cap.innerHTML='<b>638</b> finished a course. <b>615</b> began one and stopped. <b>323</b> never started.';
+  }
+  function play(){
+    reset();
+    if(reduce){ finish(); return; }
+    stages.forEach(function(st,si){
+      timers.push(setTimeout(function(){
+        cap.innerHTML=st.text;
+        var grp=assign.filter(function(a){return a.stage===si;});
+        var span=Math.max(1, grp.length-1);
+        grp.forEach(function(a,i){
+          a.el.style.transitionDelay=Math.round(i/span*900)+'ms';
+          a.el.className=a.cls;
+        });
+      }, 1000+si*1900));
+    });
+    timers.push(setTimeout(finish, 1000+stages.length*1900+700));
+  }
+  btn.addEventListener('click', play);
+
+  var seen=false;
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es,o){
+      es.forEach(function(e){ if(e.isIntersecting && !seen){ seen=true; play(); o.disconnect(); } });
+    },{threshold:.35}).observe(grid);
+  } else { finish(); }
+  if(reduce) finish();
+})();
+</script>
+</body>
+</html>
